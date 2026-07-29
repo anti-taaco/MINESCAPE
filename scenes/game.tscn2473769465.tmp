@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cr28m0js5r1ux"]
+
+[ext_resource type="Script" uid="uid://df2fwrgrxi351" path="res://scripts/grid.gd" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://cjvau2qrycvc2" path="res://scripts/cursor.gd" id="1_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://c3uw8e0yi0jgy" path="res://assets/tile.png" id="2_lnu2h"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
+texture = ExtResource("2_lnu2h")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8cj0n"]
+sources/0 = SubResource("TileSetAtlasSource_lbhrr")
+
+[node name="Game" type="Node2D" unique_id=864043115]
+
+[node name="Cursor" type="Node2D" parent="." unique_id=1569713902]
+script = ExtResource("1_yqjtg")
+
+[node name="TileMap" type="TileMap" parent="." unique_id=21845593]
+tile_set = SubResource("TileSet_8cj0n")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0)
+script = ExtResource("1_uwrxv")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=348866829]
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://v8n5woitackv"]
+
+[ext_resource type="Script" uid="uid://rq5mjsb6ujlq" path="res://scripts/bugs/resize.gd" id="1_dww16"]
+[ext_resource type="Texture2D" uid="uid://bd0k2x84soj2u" path="res://assets/sprites/viruses/curser.png" id="2_dww16"]
+
+[resource]
+script = ExtResource("1_dww16")
+texture = ExtResource("2_dww16")
+name = "Resize"
+description = "Curser is larger"
+bit_gain = 400
+stack = 3
+virus_needed = Array[String](["curser"])
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

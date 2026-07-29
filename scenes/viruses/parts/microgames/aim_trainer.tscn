@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bof6y1of8v0g2"]
+
+[ext_resource type="Script" uid="uid://chfxl8j4cr8mt" path="res://scripts/viruses/microgames/aim_trainer.gd" id="1_n4684"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n4684"]
+size = Vector2(16, 16)
+
+[node name="AimTrainer" type="Node2D" unique_id=812906082]
+script = ExtResource("1_n4684")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1805944031]
+scale = Vector2(1.2, 1)
+color = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(0, 0, 16, 0, 16, 16, 0, 16)
+uv = PackedVector2Array(-48, 8)
+
+[node name="Area2D" type="Area2D" parent="Polygon2D" unique_id=1486431170]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Polygon2D/Area2D" unique_id=110811577]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_n4684")
+
+[connection signal="mouse_entered" from="Polygon2D/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Polygon2D/Area2D" to="." method="_on_area_2d_mouse_exited"]

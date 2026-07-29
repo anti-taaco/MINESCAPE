@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://clmv3bw672odd"]
+
+[ext_resource type="Script" uid="uid://dpr78vareep2x" path="res://scripts/upgrades/system_update.gd" id="1_kxhsr"]
+[ext_resource type="Texture2D" uid="uid://b52ubawxdo67x" path="res://assets/sprites/flag.png" id="2_kxhsr"]
+
+[resource]
+script = ExtResource("1_kxhsr")
+texture = ExtResource("2_kxhsr")
+name = "System Update"
+description = "Class-specific upgrade to Main Ability"
+bit_cost = 350
+stack = 1
+level = 5
+metadata/_custom_type_script = "uid://dtcf5w6l6py6a"

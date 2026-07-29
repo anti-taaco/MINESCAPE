@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3 uid="uid://ccrqcyy7dx5pg"]
+
+[ext_resource type="Script" uid="uid://i3aio6js6jya" path="res://scripts/bugs/duplicate.gd" id="1_bco56"]
+[ext_resource type="Texture2D" uid="uid://bd0k2x84soj2u" path="res://assets/sprites/viruses/curser.png" id="2_bco56"]
+
+[resource]
+script = ExtResource("1_bco56")
+texture = ExtResource("2_bco56")
+name = "Duplicate"
+description = "+2 additional Cursers per Curser you selected"
+bit_gain = 300
+stack = 1
+level = 5
+virus_needed = Array[String](["curser"])
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://dfl0kt03lc0xc"]
+
+[ext_resource type="Script" uid="uid://bchg2wyyebrhp" path="res://scripts/player/game_ui.gd" id="1_yubou"]
+[ext_resource type="Texture2D" uid="uid://cg3xnlem6l3rk" path="res://assets/ui/board_upbar.png" id="2_hmndv"]
+[ext_resource type="Texture2D" uid="uid://bffj0ea0qwd88" path="res://assets/ui/board_upbar_mid.png" id="3_p4jm6"]
+
+[node name="GameUI" type="CanvasLayer" unique_id=789943783]
+layer = -1
+script = ExtResource("1_yubou")
+
+[node name="Bar_Up" type="TextureRect" parent="." unique_id=1018970404]
+offset_right = 480.0
+offset_bottom = 270.0
+pivot_offset = Vector2(241, 21)
+mouse_filter = 2
+texture = ExtResource("2_hmndv")
+
+[node name="Mid_Button" type="TextureRect" parent="." unique_id=1964704279]
+offset_right = 480.0
+offset_bottom = 270.0
+mouse_filter = 2
+texture = ExtResource("3_p4jm6")
+
+[node name="Control" type="Control" parent="." unique_id=1677852967]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="ColorRectL" type="ColorRect" parent="Control" unique_id=1005848629]
+z_index = -1
+layout_mode = 0
+offset_right = 104.0
+offset_bottom = 271.0
+color = Color(0.5729883, 0.5729883, 0.5729883, 1)
+
+[node name="ColorRectR" type="ColorRect" parent="Control" unique_id=1187084006]
+z_index = -1
+layout_mode = 0
+offset_left = 376.0
+offset_right = 480.0
+offset_bottom = 271.0
+color = Color(0.57254905, 0.57254905, 0.57254905, 1)
+
+[node name="ColorRectU" type="ColorRect" parent="Control" unique_id=1929446809]
+z_index = -1
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 30.0
+color = Color(0.72156864, 0.72156864, 0.72156864, 1)
+
+[node name="LabelLevel" type="Label" parent="." unique_id=1419531314]
+offset_left = 220.0
+offset_top = 242.0
+offset_right = 260.0
+offset_bottom = 265.0
+text = "level"
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelBits" type="Label" parent="." unique_id=359470480]
+offset_left = 11.0
+offset_top = 214.0
+offset_right = 51.0
+offset_bottom = 237.0
+text = "bits"
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelPos" type="Label" parent="." unique_id=183603944]
+offset_left = 404.0
+offset_top = 244.0
+offset_right = 444.0
+offset_bottom = 267.0
+text = "pos"
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelTime" type="Label" parent="." unique_id=80404336]
+offset_left = 409.0
+offset_top = 2.0
+offset_right = 452.0
+offset_bottom = 26.0
+text = "TIME:"
+
+[node name="LabelMines" type="Label" parent="." unique_id=612313365]
+offset_left = 8.0
+offset_top = 1.0
+offset_right = 63.0
+offset_bottom = 24.0
+text = "MINES:"
+
+[node name="LabelLives" type="Label" parent="." unique_id=112341608]
+offset_left = 11.0
+offset_top = 33.0
+offset_right = 51.0
+offset_bottom = 57.0
+text = "lives:"
+
+[node name="LabelAbUses" type="Label" parent="." unique_id=413170290]
+offset_left = 10.0
+offset_top = 236.0
+offset_right = 83.0
+offset_bottom = 259.0
+text = "ab. uses"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3 uid="uid://c838s7e24jr4i"]
+
+[ext_resource type="Script" uid="uid://muwtf31dx5oe" path="res://scripts/bugs/farming.gd" id="1_il7g6"]
+[ext_resource type="Texture2D" uid="uid://3i4m2gxmyt5u" path="res://assets/sprites/viruses/content_breaking.png" id="2_il7g6"]
+
+[resource]
+script = ExtResource("1_il7g6")
+texture = ExtResource("2_il7g6")
+name = "Farming"
+description = "Content spawns hearts twice as fast, but each heart explodes much slower"
+bit_gain = 600
+stack = 1
+level = 8
+virus_needed = Array[String](["content"])
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

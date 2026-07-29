@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dj1f35jtsqh4c"]
+
+[ext_resource type="Script" uid="uid://dv1b4krvg3lfb" path="res://scripts/choice.gd" id="1_ycxmd"]
+[ext_resource type="Texture2D" uid="uid://dm3ifv6kcwpbj" path="res://icon.svg" id="2_yhyp7"]
+
+[node name="Choice" type="Control" unique_id=1963501307]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ycxmd")
+
+[node name="Name_Label" type="Label" parent="." unique_id=1895912181]
+layout_mode = 0
+offset_left = -35.0
+offset_top = -105.0
+offset_right = 35.0
+offset_bottom = -82.0
+theme_override_font_sizes/font_size = 12
+text = "name"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=762984332]
+layout_mode = 0
+offset_left = -35.0
+offset_top = -82.0
+offset_right = 35.0
+offset_bottom = -12.0
+texture = ExtResource("2_yhyp7")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Button" type="Button" parent="." unique_id=938520286]
+layout_mode = 0
+offset_left = -45.0
+offset_top = 15.0
+offset_right = 45.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 14
+text = "test"
+clip_text = true
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=1265913674]
+layout_mode = 0
+offset_left = -45.0
+offset_top = -8.0
+offset_right = 45.0
+offset_bottom = 8.0
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 6
+text = "description"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

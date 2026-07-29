@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cyri08wsgrmq1"
+path="res://.godot/imported/Undertale Hot Cat MeowMeowMeow Sound Effect.mp3-3909278be77c22e5dc1550584d979f2d.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sfx/viruses/Undertale Hot Cat MeowMeowMeow Sound Effect.mp3"
+dest_files=["res://.godot/imported/Undertale Hot Cat MeowMeowMeow Sound Effect.mp3-3909278be77c22e5dc1550584d979f2d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

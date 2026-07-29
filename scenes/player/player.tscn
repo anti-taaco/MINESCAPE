@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://bdo0fac06u5uc"]
+
+[ext_resource type="PackedScene" uid="uid://dfl0kt03lc0xc" path="res://scenes/player/game_ui.tscn" id="1_dqkch"]
+[ext_resource type="Script" uid="uid://cjvau2qrycvc2" path="res://scripts/player/cursor.gd" id="1_qhqgy"]
+[ext_resource type="Script" uid="uid://b2c2pkuaqcbvk" path="res://scripts/player/player.gd" id="1_qlg0r"]
+[ext_resource type="Resource" uid="uid://dtjuwrl31lmqk" path="res://scripts/resources/classes/sweeper.tres" id="2_75vfm"]
+[ext_resource type="Script" uid="uid://o6ekr1diueta" path="res://scripts/player/camera.gd" id="3_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://c3uw8e0yi0jgy" path="res://assets/sprites/tile.png" id="5_qlg0r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_75vfm"]
+size = Vector2(2, 2)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tuyoq"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fjrip"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dqkch"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qlg0r"]
+normal = Vector2(0, 1)
+
+[node name="Player" type="Node2D" unique_id=1936477571]
+visibility_layer = 2
+script = ExtResource("1_qlg0r")
+p_class = ExtResource("2_75vfm")
+
+[node name="GameUI" parent="." unique_id=789943783 instance=ExtResource("1_dqkch")]
+
+[node name="Cursor" type="Node2D" parent="." unique_id=952912517]
+script = ExtResource("1_qhqgy")
+
+[node name="Area2D" type="Area2D" parent="Cursor" unique_id=1790944793]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cursor/Area2D" unique_id=529404480]
+shape = SubResource("RectangleShape2D_75vfm")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=1962103376]
+position = Vector2(240, 136)
+zoom = Vector2(2, 2)
+position_smoothing_speed = 32.0
+script = ExtResource("3_qlg0r")
+
+[node name="V Borders" type="StaticBody2D" parent="Camera" unique_id=2010027371]
+
+[node name="left" type="CollisionShape2D" parent="Camera/V Borders" unique_id=251057146]
+shape = SubResource("WorldBoundaryShape2D_tuyoq")
+
+[node name="right" type="CollisionShape2D" parent="Camera/V Borders" unique_id=765419900]
+shape = SubResource("WorldBoundaryShape2D_fjrip")
+
+[node name="H Borders" type="StaticBody2D" parent="Camera" unique_id=2058660975]
+
+[node name="bottom" type="CollisionShape2D" parent="Camera/H Borders" unique_id=1432780780]
+shape = SubResource("WorldBoundaryShape2D_dqkch")
+
+[node name="top" type="CollisionShape2D" parent="Camera/H Borders" unique_id=8432738]
+shape = SubResource("WorldBoundaryShape2D_qlg0r")
+
+[node name="TextureRect" type="TextureRect" parent="Camera" unique_id=1022014034]
+visible = false
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 35.0
+offset_bottom = 35.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_qlg0r")

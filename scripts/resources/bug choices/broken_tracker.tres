@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3 uid="uid://chqoo3nao4r6f"]
+
+[ext_resource type="Script" uid="uid://bk2dl1afvukj2" path="res://scripts/bugs/broken_tracker.gd" id="1_4kycl"]
+[ext_resource type="Texture2D" uid="uid://djkb052jtsyim" path="res://assets/sprites/mine.png" id="2_4kycl"]
+
+[resource]
+script = ExtResource("1_4kycl")
+texture = ExtResource("2_4kycl")
+name = "Broken Tracker"
+description = "Mine count is hidden"
+bit_gain = 200
+stack = 1
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

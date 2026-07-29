@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bs3igk8qgq6mp"]
+
+[ext_resource type="PackedScene" uid="uid://biyyxgkplyof" path="res://scenes/bg_music.tscn" id="1_qwk4e"]
+[ext_resource type="Script" uid="uid://bajq56feqosl0" path="res://scripts/intermission.gd" id="1_xx0sb"]
+
+[node name="Intermission" type="Node2D" unique_id=879600448]
+script = ExtResource("1_xx0sb")
+
+[node name="BG Music" parent="." unique_id=265166352 instance=ExtResource("1_qwk4e")]

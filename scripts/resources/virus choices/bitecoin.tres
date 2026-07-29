@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="VirusChoice" format=3 uid="uid://lt5yucwj0r7a"]
+
+[ext_resource type="Script" uid="uid://cqac0q3lkmb7l" path="res://scripts/resources/virus choices/virus_choice.gd" id="1_aqkny"]
+[ext_resource type="Texture2D" uid="uid://dvimxri4vd52d" path="res://assets/sprites/viruses/bitecoin_attack.png" id="2_uaa48"]
+
+[resource]
+script = ExtResource("1_aqkny")
+texture = ExtResource("2_uaa48")
+name = "Bitecoin"
+description = "Dashes in a straight line towards you. Steals bits on hit. If you can't pay, take 3 damage instead"
+bit_gain = 800
+stack = 4
+level = 5
+metadata/_custom_type_script = "uid://cqac0q3lkmb7l"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://crjimmokj0bjk"]
+
+[ext_resource type="Script" uid="uid://coy51xyd5bn04" path="res://scripts/bugs/1-down.gd" id="1_3chcc"]
+[ext_resource type="Texture2D" uid="uid://d12rausp5ovts" path="res://assets/sprites/one.png" id="2_tok5f"]
+
+[resource]
+script = ExtResource("1_3chcc")
+texture = ExtResource("2_tok5f")
+name = "1-Down"
+description = "-1 Life"
+bit_gain = 800
+stack = 3
+level = 5
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

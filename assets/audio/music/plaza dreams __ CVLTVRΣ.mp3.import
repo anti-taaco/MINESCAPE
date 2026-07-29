@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cr7vvn7fb74vt"
+path="res://.godot/imported/plaza dreams __ CVLTVRΣ.mp3-1e306f2175d57ee872e6d6323874d916.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/plaza dreams __ CVLTVRΣ.mp3"
+dest_files=["res://.godot/imported/plaza dreams __ CVLTVRΣ.mp3-1e306f2175d57ee872e6d6323874d916.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

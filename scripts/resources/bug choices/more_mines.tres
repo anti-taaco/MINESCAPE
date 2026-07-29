@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3 uid="uid://bjsuss7skrmkx"]
+
+[ext_resource type="Script" uid="uid://co1j32l5312lg" path="res://scripts/bugs/more_mines.gd" id="1_rx1q3"]
+[ext_resource type="Texture2D" uid="uid://djkb052jtsyim" path="res://assets/sprites/mine.png" id="2_rx1q3"]
+
+[resource]
+script = ExtResource("1_rx1q3")
+texture = ExtResource("2_rx1q3")
+name = "More Mines"
+description = "25% more mines"
+bit_gain = 450
+stack = 3
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bukvrks2xtw0v"
+path="res://.godot/imported/Blue Screen Of Death Sound.mp3-d11ea45d46a63a63040bfbcc375ccd92.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sfx/viruses/Blue Screen Of Death Sound.mp3"
+dest_files=["res://.godot/imported/Blue Screen Of Death Sound.mp3-d11ea45d46a63a63040bfbcc375ccd92.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

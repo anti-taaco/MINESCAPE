@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3 uid="uid://p48o7tley4cm"]
+
+[ext_resource type="Script" uid="uid://cvb45orng2giu" path="res://scripts/upgrades/defuse_kit.gd" id="1_ap1j2"]
+[ext_resource type="Texture2D" uid="uid://b52ubawxdo67x" path="res://assets/sprites/flag.png" id="2_ap1j2"]
+
+[resource]
+script = ExtResource("1_ap1j2")
+texture = ExtResource("2_ap1j2")
+name = "Defuse Kit"
+description = "+10% chance to not take damage from opening a mine"
+bit_cost = 300
+stack = 3
+metadata/_custom_type_script = "uid://dtcf5w6l6py6a"

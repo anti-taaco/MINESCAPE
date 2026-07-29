@@ -1,0 +1,12 @@
+[gd_resource type="Resource" format=3 uid="uid://b1kpsji4j6pbp"]
+
+[ext_resource type="Script" uid="uid://dd8110aosowh4" path="res://scripts/upgrades/1-up.gd" id="1_8lne5"]
+[ext_resource type="Texture2D" uid="uid://d12rausp5ovts" path="res://assets/sprites/one.png" id="2_8lne5"]
+
+[resource]
+script = ExtResource("1_8lne5")
+texture = ExtResource("2_8lne5")
+name = "1-Up"
+description = "+1 max. life"
+bit_cost = 320
+metadata/_custom_type_script = "uid://dtcf5w6l6py6a"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://cmfq8ds7yiqy3"]
+
+[ext_resource type="Script" uid="uid://ca0svi1624ng2" path="res://scripts/bugs/bitcoin_mining.gd" id="1_7ipb0"]
+[ext_resource type="Texture2D" uid="uid://g7ocsjdwfvm3" path="res://assets/sprites/viruses/nyan_cat rainbow.png" id="2_7ipb0"]
+
+[resource]
+script = ExtResource("1_7ipb0")
+texture = ExtResource("2_7ipb0")
+name = "Bitcoin Mining"
+description = "x1.5 Bit multiplier but +3 random Viruses"
+bit_gain = 600
+stack = 1
+level = 5
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

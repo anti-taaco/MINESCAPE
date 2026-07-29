@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://da2m1nq2twea2"]
+
+[ext_resource type="Script" uid="uid://dua37m6rjb2e0" path="res://scripts/bugs/processor.gd" id="1_0fyd0"]
+[ext_resource type="Texture2D" uid="uid://2idjqxlum0h1" path="res://assets/sprites/viruses/bcod.png" id="2_0fyd0"]
+
+[resource]
+script = ExtResource("1_0fyd0")
+texture = ExtResource("2_0fyd0")
+name = "Processor"
+description = "Less time to react to attacks"
+bit_gain = 350
+stack = 2
+virus_needed = Array[String](["bcod"])
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

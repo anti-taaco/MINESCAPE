@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dspojhotds26n"]
+
+[ext_resource type="Script" uid="uid://df5laeliwb57s" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="PackedScene" uid="uid://biyyxgkplyof" path="res://scenes/bg_music.tscn" id="2_ekxnf"]
+
+[node name="Main Menu" type="Node2D" unique_id=878417217]
+script = ExtResource("1_l6cm7")
+
+[node name="TITLE" type="Label" parent="." unique_id=416855630]
+offset_left = 40.0
+offset_top = 2.0
+offset_right = 442.0
+offset_bottom = 101.0
+theme_override_font_sizes/font_size = 72
+text = "MINESCAPE"
+
+[node name="prototype" type="Label" parent="." unique_id=991265422]
+offset_left = 39.0
+offset_top = 88.0
+offset_right = 444.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 10
+text = "VERY VERY EARLY PROTOTYPE BUILD -- EVERYTHING YOU SEE IS SUBJECT TO CHANGE"
+
+[node name="Play" type="Button" parent="." unique_id=1735077325]
+offset_left = 220.0
+offset_top = 129.0
+offset_right = 267.0
+offset_bottom = 160.0
+text = "PLAY
+"
+
+[node name="Settings" type="Button" parent="." unique_id=36175753]
+offset_left = 169.0
+offset_top = 176.0
+offset_right = 320.0
+offset_bottom = 207.0
+text = "SETTINGS (not yet)
+"
+icon_alignment = 1
+
+[node name="Quit" type="Button" parent="." unique_id=1161525454]
+offset_left = 221.0
+offset_top = 221.0
+offset_right = 268.0
+offset_bottom = 252.0
+text = "QUIT
+"
+
+[node name="BG Music" parent="." unique_id=265166352 instance=ExtResource("2_ekxnf")]
+
+[connection signal="button_up" from="Play" to="." method="_on_play_button_up"]
+[connection signal="button_up" from="Quit" to="." method="_on_quit_button_up"]

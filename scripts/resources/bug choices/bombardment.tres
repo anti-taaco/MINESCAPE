@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://b5v8dw2iaoetr"]
+
+[ext_resource type="Script" uid="uid://c8i3i07fsrhx0" path="res://scripts/bugs/bombardment.gd" id="1_jsh7r"]
+[ext_resource type="Texture2D" uid="uid://2idjqxlum0h1" path="res://assets/sprites/viruses/bcod.png" id="2_jsh7r"]
+
+[resource]
+script = ExtResource("1_jsh7r")
+texture = ExtResource("2_jsh7r")
+name = "Bombardment"
+description = "BCOD fires 3 more lines, but you have more time to react"
+bit_gain = 600
+stack = 1
+virus_needed = Array[String](["bcod"])
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

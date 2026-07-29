@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://bmtnveyl335cw"]
+
+[ext_resource type="Script" uid="uid://ctb8b3pan4qwf" path="res://scripts/upgrades/iteration.gd" id="1_lqkos"]
+[ext_resource type="Texture2D" uid="uid://d4x6xh3mjlm8" path="res://assets/sprites/opened_tile.png" id="2_lqkos"]
+
+[resource]
+script = ExtResource("1_lqkos")
+texture = ExtResource("2_lqkos")
+name = "Iteration"
+description = "When opening a tile, +3% chance to open nearby safe tiles"
+bit_cost = 666
+stack = 3
+level = 5
+metadata/_custom_type_script = "uid://dtcf5w6l6py6a"

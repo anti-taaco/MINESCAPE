@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="VirusChoice" format=3 uid="uid://bres6c11lbwin"]
+
+[ext_resource type="Script" uid="uid://cqac0q3lkmb7l" path="res://scripts/resources/virus choices/virus_choice.gd" id="1_s7ljd"]
+[ext_resource type="Texture2D" uid="uid://c3uw8e0yi0jgy" path="res://assets/sprites/tile.png" id="2_x7w8d"]
+
+[resource]
+script = ExtResource("1_s7ljd")
+texture = ExtResource("2_x7w8d")
+name = "Tetromino"
+description = "Falls down from the screen"
+bit_gain = 300
+stack = 4
+metadata/_custom_type_script = "uid://cqac0q3lkmb7l"

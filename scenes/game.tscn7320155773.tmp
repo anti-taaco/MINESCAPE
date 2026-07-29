@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cr28m0js5r1ux"]
+
+[ext_resource type="Script" uid="uid://bxmyi7baj8p0o" path="res://scripts/game.gd" id="1_gee14"]
+[ext_resource type="PackedScene" uid="uid://bdo0fac06u5uc" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://w5qpuypg4j3w" path="res://scenes/board.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://biyyxgkplyof" path="res://scenes/bg_music.tscn" id="3_lnu2h"]
+
+[node name="Game" type="Node2D" unique_id=864043115]
+script = ExtResource("1_gee14")
+
+[node name="Board" parent="." unique_id=388124613 instance=ExtResource("2_lnu2h")]
+
+[node name="Player" parent="." unique_id=1936477571 instance=ExtResource("1_uwrxv")]
+unique_name_in_owner = true
+
+[node name="Viruses" type="Node2D" parent="." unique_id=3713793]
+
+[node name="BG Music" parent="." unique_id=265166352 instance=ExtResource("3_lnu2h")]

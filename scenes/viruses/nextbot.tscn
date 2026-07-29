@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://87kwfotofpx3"]
+
+[ext_resource type="Script" uid="uid://dh5sq3piwauu3" path="res://scripts/viruses/nextbot.gd" id="1_7fquv"]
+[ext_resource type="Texture2D" uid="uid://dm3ifv6kcwpbj" path="res://icon.svg" id="1_n2gb7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fquv"]
+size = Vector2(26, 26)
+
+[node name="Nextbot" type="CharacterBody2D" unique_id=190515818]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_7fquv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=270756833]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_n2gb7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=890252231]
+shape = SubResource("RectangleShape2D_7fquv")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1880441728]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1905662563]
+shape = SubResource("RectangleShape2D_7fquv")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

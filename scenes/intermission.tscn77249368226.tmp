@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bs3igk8qgq6mp"]
+
+[ext_resource type="PackedScene" uid="uid://biyyxgkplyof" path="res://scenes/bg_music.tscn" id="1_qwk4e"]
+[ext_resource type="Script" uid="uid://bajq56feqosl0" path="res://scripts/intermission.gd" id="1_xx0sb"]
+
+[node name="Intermission" type="Node2D" unique_id=879600448]
+script = ExtResource("1_xx0sb")
+
+[node name="Label" type="Label" parent="." unique_id=1302776457]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "LEVEL"
+
+[node name="Label2" type="Label" parent="." unique_id=1571961194]
+offset_left = 408.0
+offset_right = 448.0
+offset_bottom = 23.0
+text = "BITS"
+
+[node name="Selection" type="Control" parent="." unique_id=2010845181]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BG Music" parent="." unique_id=265166352 instance=ExtResource("1_qwk4e")]
+
+[node name="Button" type="Button" parent="." unique_id=154973690]
+visible = false
+offset_left = 200.0
+offset_top = 216.0
+offset_right = 279.0
+offset_bottom = 247.0
+text = "Continue"
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

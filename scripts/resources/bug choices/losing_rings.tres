@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://dfeh6hvpanyhr"]
+
+[ext_resource type="Script" uid="uid://d0ftb5jafkrlp" path="res://scripts/bugs/losing_rings.gd" id="1_gjha1"]
+[ext_resource type="Texture2D" uid="uid://d4x6xh3mjlm8" path="res://assets/sprites/opened_tile.png" id="2_88wd8"]
+
+[resource]
+script = ExtResource("1_gjha1")
+texture = ExtResource("2_88wd8")
+name = "Losing Rings"
+description = "-150 Bits per life lost"
+bit_gain = 800
+stack = 3
+level = 3
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

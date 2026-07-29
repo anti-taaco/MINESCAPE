@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://drfj5idmr8a6i"
+path="res://.godot/imported/BSOD Buzzing 44100hz Sound.mp3-cbbbecd3679b347c3b02d6c9675dd85d.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sfx/viruses/BSOD Buzzing 44100hz Sound.mp3"
+dest_files=["res://.godot/imported/BSOD Buzzing 44100hz Sound.mp3-cbbbecd3679b347c3b02d6c9675dd85d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

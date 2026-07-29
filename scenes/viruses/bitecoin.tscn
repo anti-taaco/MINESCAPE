@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://2vmxq0ig8byx"]
+
+[ext_resource type="Texture2D" uid="uid://dvimxri4vd52d" path="res://assets/sprites/viruses/bitecoin_attack.png" id="1_d0qi5"]
+[ext_resource type="Script" uid="uid://b10rhkvm51pys" path="res://scripts/viruses/bitecoin.gd" id="1_ieqwn"]
+[ext_resource type="Texture2D" uid="uid://bhq8gokp1d2ku" path="res://assets/sprites/viruses/bitecoin_idle.png" id="2_ieqwn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dxm6q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_d0qi5")
+}],
+"loop": true,
+"name": &"attacking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ieqwn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ieqwn"]
+radius = 16.0
+
+[node name="Bitecoin" type="CharacterBody2D" unique_id=1432577122]
+script = ExtResource("1_ieqwn")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=266907437]
+width = 4.0
+default_color = Color(1, 0, 0, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1949364326]
+sprite_frames = SubResource("SpriteFrames_dxm6q")
+animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1036057160]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=109212637]
+shape = SubResource("CircleShape2D_ieqwn")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

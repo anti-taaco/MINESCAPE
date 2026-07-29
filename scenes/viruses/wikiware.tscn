@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://6x1x4lahjen3"]
+
+[ext_resource type="Script" uid="uid://colp0pgafklx1" path="res://scripts/viruses/wikiware.gd" id="1_dan3b"]
+
+[node name="WikiWare" type="CharacterBody2D" unique_id=1675580893]
+script = ExtResource("1_dan3b")
+
+[node name="Screen" type="Polygon2D" parent="." unique_id=248011148]
+self_modulate = Color(1, 1, 1, 0.6)
+color = Color(0.11224658, 0.113758735, 0.12909058, 1)
+polygon = PackedVector2Array(0, 0, 192, 0, 192, 54.39353, 192, 108, 0, 108)
+
+[node name="Line2D" type="Line2D" parent="Screen" unique_id=1797286570]
+width = 4.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=670965564]
+self_modulate = Color(1, 1, 1, 0.8)
+offset_left = 170.0
+offset_top = 2.0
+offset_right = 188.0
+offset_bottom = 18.0
+theme_override_font_sizes/font_size = 10
+text = "10s"
+
+[node name="Microgame" type="Node2D" parent="." unique_id=754305226]

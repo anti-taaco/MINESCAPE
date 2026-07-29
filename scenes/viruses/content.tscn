@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://by35s2mx418lb"]
+
+[ext_resource type="Script" uid="uid://8xo532l1n7v3" path="res://scripts/viruses/content.gd" id="1_eeyrc"]
+
+[node name="Content" type="Node2D" unique_id=289246649]
+script = ExtResource("1_eeyrc")
+
+[node name="Spawnables" type="Node2D" parent="." unique_id=107618300]

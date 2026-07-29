@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://f4g8yh0nxpob"]
+
+[ext_resource type="Script" uid="uid://jwpkydkc0f31" path="res://scripts/bugs/wake_up.gd" id="1_4ipby"]
+[ext_resource type="Texture2D" uid="uid://uqp4tsv5a585" path="res://assets/sprites/viruses/sleepmode_2.png" id="2_4ipby"]
+
+[resource]
+script = ExtResource("1_4ipby")
+texture = ExtResource("2_4ipby")
+name = "Wake Up"
+description = "SleepMode keeps its eyes open for longer"
+bit_gain = 300
+stack = 2
+virus_needed = Array[String](["sleep_mode"])
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

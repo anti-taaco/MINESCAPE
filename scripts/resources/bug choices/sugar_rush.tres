@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://ci3ykn6gagsqf"]
+
+[ext_resource type="Script" uid="uid://d2uhecsefvj7p" path="res://scripts/bugs/sugar_rush.gd" id="1_nq8a5"]
+[ext_resource type="Texture2D" uid="uid://ddwuy784130hl" path="res://assets/sprites/viruses/nyan_cat.png" id="2_nq8a5"]
+
+[resource]
+script = ExtResource("1_nq8a5")
+texture = ExtResource("2_nq8a5")
+name = "Sugar Rush"
+description = "Nyan Cat moves 20% faster"
+bit_gain = 400
+stack = 2
+virus_needed = Array[String](["nyan_cat"])
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://c4a6vlyn37d0r"]
+
+[ext_resource type="Texture2D" uid="uid://cdg0qumeglxs0" path="res://assets/sprites/viruses/content.png" id="1_4l35q"]
+[ext_resource type="Script" uid="uid://b0wop7olxexqq" path="res://scripts/viruses/content_spawn.gd" id="1_88smb"]
+[ext_resource type="Texture2D" uid="uid://dp4m3einff4y4" path="res://assets/sprites/viruses/content_breaking2.png" id="2_1bxlo"]
+[ext_resource type="Texture2D" uid="uid://3i4m2gxmyt5u" path="res://assets/sprites/viruses/content_breaking.png" id="4_ovjlf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4l35q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1bxlo")
+}],
+"loop": true,
+"name": &"breaking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4l35q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ovjlf")
+}],
+"loop": true,
+"name": &"partially breaking",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88smb"]
+size = Vector2(16, 15)
+
+[node name="ContentSpawn" type="CharacterBody2D" unique_id=2047931757]
+script = ExtResource("1_88smb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1862020640]
+sprite_frames = SubResource("SpriteFrames_4l35q")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=263566984]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2072729506]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_88smb")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

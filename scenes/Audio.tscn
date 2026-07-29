@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://ctv3g4n7pa6ja"]
+
+[ext_resource type="Script" uid="uid://de8j1vk81e2jr" path="res://scripts/globals/Audio.gd" id="1_8bdof"]
+[ext_resource type="AudioStream" uid="uid://dfi3oatvaqdqr" path="res://assets/audio/sfx/player/Explosion (Rocket shot._wav) - Classic Time Bomb - Roblox 0.mp3" id="2_l20ah"]
+[ext_resource type="AudioStream" uid="uid://cfcky632dqoj8" path="res://assets/audio/sfx/player/Roblox _Ouch!_ Sound..mp3" id="3_fdwst"]
+[ext_resource type="AudioStream" uid="uid://cfpf0h7hbpfge" path="res://assets/audio/sfx/player/Tick - Sound Effect (HD).mp3" id="4_b4ede"]
+[ext_resource type="AudioStream" uid="uid://cyri08wsgrmq1" path="res://assets/audio/sfx/viruses/Undertale Hot Cat MeowMeowMeow Sound Effect.mp3" id="5_l20ah"]
+[ext_resource type="AudioStream" uid="uid://c6uqfgqwv4nq3" path="res://assets/audio/sfx/viruses/Phone Dial Tone - Sound Effect (HD) 0.mp3" id="6_b4ede"]
+[ext_resource type="AudioStream" uid="uid://hxcewfvy0k5" path="res://assets/audio/sfx/viruses/Old 90s PC boot sequence (4K) 0.mp3" id="7_u2p1o"]
+[ext_resource type="AudioStream" uid="uid://cu2qb4ipy01w" path="res://assets/audio/sfx/viruses/Microsoft Windows XP Shutdown - Sound Effect (HD) 0.mp3" id="7_xw0gm"]
+[ext_resource type="AudioStream" uid="uid://bukvrks2xtw0v" path="res://assets/audio/sfx/viruses/Blue Screen Of Death Sound.mp3" id="9_kqc8r"]
+[ext_resource type="AudioStream" uid="uid://drfj5idmr8a6i" path="res://assets/audio/sfx/viruses/BSOD Buzzing 44100hz Sound.mp3" id="10_mvwgk"]
+[ext_resource type="AudioStream" uid="uid://kp51tg181jtp" path="res://assets/audio/sfx/viruses/Tetris (Game Boy) Line Clear Sound Effects.mp3" id="11_mvwgk"]
+[ext_resource type="AudioStream" uid="uid://nojloug8td0q" path="res://assets/audio/sfx/viruses/8 Bit-Hit - Free Sound Effect [HD].mp3" id="11_r7xuu"]
+
+[node name="Audio" type="AudioStreamPlayer2D" unique_id=222432921]
+bus = &"SFX"
+script = ExtResource("1_8bdof")
+
+[node name="Player" type="Node" parent="." unique_id=388548168]
+
+[node name="Mine" type="AudioStreamPlayer" parent="Player" unique_id=2001937588]
+stream = ExtResource("2_l20ah")
+volume_db = -5.0
+max_polyphony = 5
+
+[node name="Hit" type="AudioStreamPlayer" parent="Player" unique_id=1950030168]
+stream = ExtResource("3_fdwst")
+volume_db = -2.0
+
+[node name="Open" type="AudioStreamPlayer" parent="Player" unique_id=1612737415]
+stream = ExtResource("4_b4ede")
+volume_db = -1.0
+
+[node name="Nyan Cat" type="Node" parent="." unique_id=1163307952]
+
+[node name="Bounce" type="AudioStreamPlayer" parent="Nyan Cat" unique_id=2094750459]
+stream = ExtResource("5_l20ah")
+volume_db = -10.0
+max_polyphony = 10
+
+[node name="SleepMode" type="Node" parent="." unique_id=1235114336]
+
+[node name="Active" type="AudioStreamPlayer" parent="SleepMode" unique_id=799025228]
+stream = ExtResource("6_b4ede")
+volume_db = -14.0
+
+[node name="Wake" type="AudioStreamPlayer" parent="SleepMode" unique_id=747189601]
+stream = ExtResource("7_u2p1o")
+
+[node name="Hit" type="AudioStreamPlayer" parent="SleepMode" unique_id=490844203]
+stream = ExtResource("7_xw0gm")
+volume_db = -5.0
+
+[node name="BCOD" type="Node" parent="." unique_id=2046751614]
+
+[node name="Lunge" type="AudioStreamPlayer" parent="BCOD" unique_id=482526147]
+stream = ExtResource("9_kqc8r")
+volume_db = -5.0
+
+[node name="Spin" type="AudioStreamPlayer" parent="BCOD" unique_id=1900025211]
+stream = ExtResource("10_mvwgk")
+volume_db = -4.0
+
+[node name="Tetromino" type="Node" parent="." unique_id=1692009843]
+
+[node name="Fall" type="AudioStreamPlayer" parent="Tetromino" unique_id=1438759145]
+stream = ExtResource("11_r7xuu")
+volume_db = -6.0
+
+[node name="Hit" type="AudioStreamPlayer" parent="Tetromino" unique_id=927332881]
+stream = ExtResource("11_mvwgk")
+
+[node name="Curser" type="Node" parent="." unique_id=1640484333]
+
+[node name="Content" type="Node" parent="." unique_id=713461202]

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://gcof0m4daai2"]
+
+[ext_resource type="Script" uid="uid://b14xlqxpk6100" path="res://scripts/upgrades/cookie_clicker.gd" id="1_6v8bl"]
+[ext_resource type="Texture2D" uid="uid://d12rausp5ovts" path="res://assets/sprites/one.png" id="2_6v8bl"]
+
+[resource]
+script = ExtResource("1_6v8bl")
+texture = ExtResource("2_6v8bl")
+name = "Cookie Clicker"
+description = "+1% chance to heal 1 Life after opening a safe tile"
+bit_cost = 800
+stack = 3
+level = 8
+metadata/_custom_type_script = "uid://dtcf5w6l6py6a"

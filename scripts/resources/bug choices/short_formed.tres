@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://btvcouxg6pq8a"]
+
+[ext_resource type="Script" uid="uid://cgs7rm58frvey" path="res://scripts/bugs/short_formed.gd" id="1_ptbfd"]
+[ext_resource type="Texture2D" uid="uid://dm3ifv6kcwpbj" path="res://icon.svg" id="2_1tt0d"]
+
+[resource]
+script = ExtResource("1_ptbfd")
+texture = ExtResource("2_1tt0d")
+name = "Short Formed"
+description = "Nextbot speed is increased by 50%"
+bit_gain = 400
+stack = 3
+virus_needed = Array[String](["nextbot"])
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

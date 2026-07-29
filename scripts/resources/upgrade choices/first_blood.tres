@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://wc5d5n8bie5k"]
+
+[ext_resource type="Script" uid="uid://drjvwggdioq4s" path="res://scripts/upgrades/first_blood.gd" id="1_bj3bv"]
+[ext_resource type="Texture2D" uid="uid://b52ubawxdo67x" path="res://assets/sprites/flag.png" id="2_mxswe"]
+
+[resource]
+script = ExtResource("1_bj3bv")
+texture = ExtResource("2_mxswe")
+name = "First Blood"
+description = "The first click of a board will open more tiles"
+bit_cost = 700
+stack = 2
+level = 5
+metadata/_custom_type_script = "uid://dtcf5w6l6py6a"

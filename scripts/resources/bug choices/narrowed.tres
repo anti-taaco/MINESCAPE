@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://bvcuabdejc1wk"]
+
+[ext_resource type="Script" uid="uid://dpk4knbcy5vpf" path="res://scripts/bugs/narrowed.gd" id="1_getpr"]
+[ext_resource type="Texture2D" uid="uid://bd0k2x84soj2u" path="res://assets/sprites/viruses/curser.png" id="2_getpr"]
+
+[resource]
+script = ExtResource("1_getpr")
+texture = ExtResource("2_getpr")
+name = "Narrowed"
+description = "Curser is closer to you"
+bit_gain = 350
+stack = 2
+virus_needed = Array[String](["curser"])
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

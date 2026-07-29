@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="VirusChoice" format=3 uid="uid://bvt5dq8a8gci7"]
+
+[ext_resource type="Script" uid="uid://cqac0q3lkmb7l" path="res://scripts/resources/virus choices/virus_choice.gd" id="1_l06s2"]
+[ext_resource type="Texture2D" uid="uid://uqp4tsv5a585" path="res://assets/sprites/viruses/sleepmode_2.png" id="2_1duhp"]
+
+[resource]
+script = ExtResource("1_l06s2")
+texture = ExtResource("2_1duhp")
+name = "Sleep Mode"
+description = "Appears at random. Stop moving to get rid of it."
+bit_gain = 400
+stack = 1
+level = 3
+metadata/_custom_type_script = "uid://cqac0q3lkmb7l"

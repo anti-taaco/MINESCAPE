@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dkaof6bm34neh"]
+
+[ext_resource type="Script" uid="uid://dvic2nrccab3w" path="res://scripts/pause_menu.gd" id="1_myx47"]
+[ext_resource type="Texture2D" uid="uid://bmtelqkeiw1wn" path="res://assets/broker.jpg" id="2_myx47"]
+
+[node name="Pause Menu" type="Control" unique_id=1809191840]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_myx47")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=874692316]
+layout_mode = 0
+offset_top = -3.0
+offset_right = 507.0
+offset_bottom = 283.0
+pivot_offset = Vector2(72, 114)
+texture = ExtResource("2_myx47")
+expand_mode = 1

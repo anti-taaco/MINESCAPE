@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3 uid="uid://dese0j6w0lv0l"]
+
+[ext_resource type="Script" uid="uid://by4m4s56wry53" path="res://scripts/bugs/screw_gravity.gd" id="1_kikh8"]
+[ext_resource type="Texture2D" uid="uid://c3uw8e0yi0jgy" path="res://assets/sprites/tile.png" id="2_kikh8"]
+
+[resource]
+script = ExtResource("1_kikh8")
+texture = ExtResource("2_kikh8")
+name = "Screw Gravity"
+description = "Tetrominos reverse their vertical direction after leaving the screen"
+bit_gain = 500
+stack = 1
+level = 5
+virus_needed = Array[String](["tetromino"])
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

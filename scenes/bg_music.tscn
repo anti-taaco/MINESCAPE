@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://biyyxgkplyof"]
+
+[ext_resource type="Script" uid="uid://blwvqjwk2fvu4" path="res://scripts/bg_music.gd" id="1_f6gl3"]
+[ext_resource type="AudioStream" uid="uid://0eg8omclki8" path="res://assets/audio/music/telecaster (ft. palm) - untitled tag game OST - hazerred.mp3" id="2_3sx0t"]
+[ext_resource type="AudioStream" uid="uid://cdxwwq7vuiigr" path="res://assets/audio/music/Something Evil Will Happen OST - asdf - nicopatty.mp3" id="2_8f2av"]
+[ext_resource type="AudioStream" uid="uid://b8175erau0cj7" path="res://assets/audio/music/Field of Flowers - rundown.mp3" id="2_8rjbd"]
+[ext_resource type="AudioStream" uid="uid://c1qidx6b3ksdx" path="res://assets/audio/music/A Block’s Journey - Mystic (Subarea Theme) - Typically.mp3" id="2_188bi"]
+[ext_resource type="AudioStream" uid="uid://c27b0r3omk7nc" path="res://assets/audio/music/The Temple of the Red Sun - Block Tales OST - UnknownNamedGuy.mp3" id="2_bw4eu"]
+[ext_resource type="AudioStream" uid="uid://6jx6sffh1uq6" path="res://assets/audio/music/Nome da musica - Windows96.mp3" id="3_cvk53"]
+[ext_resource type="AudioStream" uid="uid://bif345sg8wgjw" path="res://assets/audio/music/Dithered Shores - Xploshi.mp3" id="8_y1t4m"]
+[ext_resource type="AudioStream" uid="uid://boq0bb8pouyh1" path="res://assets/audio/music/Home - Holding Pattern.mp3" id="9_sep7s"]
+[ext_resource type="AudioStream" uid="uid://ddkvx1j168lfm" path="res://assets/audio/music/Ego Assembly - James Primate.mp3" id="10_ml18x"]
+[ext_resource type="AudioStream" uid="uid://cp3gt3iacaf48" path="res://assets/audio/music/Meleeniacs OST - Safel Commissary - nicopatty.mp3" id="11_nu72a"]
+[ext_resource type="AudioStream" uid="uid://bbqsedww3xiak" path="res://assets/audio/music/WAYFARER - Welcome to the lobby.mp3" id="11_y3glj"]
+[ext_resource type="AudioStream" uid="uid://cr7vvn7fb74vt" path="res://assets/audio/music/plaza dreams __ CVLTVRΣ.mp3" id="12_y3glj"]
+
+[node name="BG Music" type="AudioStreamPlayer2D" unique_id=265166352 node_paths=PackedStringArray("board", "intermission", "pause")]
+bus = &"Music"
+script = ExtResource("1_f6gl3")
+board = NodePath("Board")
+intermission = NodePath("Intermission")
+pause = NodePath("Pause")
+
+[node name="Board" type="Node" parent="." unique_id=695406372]
+
+[node name="The Temple of the Red Sun" type="AudioStreamPlayer" parent="Board" unique_id=1862760573]
+stream = ExtResource("2_bw4eu")
+volume_db = -6.0
+
+[node name="Nome da musica?" type="AudioStreamPlayer" parent="Board" unique_id=702345231]
+stream = ExtResource("3_cvk53")
+volume_db = -8.0
+
+[node name="Field Of Flowers" type="AudioStreamPlayer" parent="Board" unique_id=1567620317]
+stream = ExtResource("2_8rjbd")
+volume_db = -5.0
+
+[node name="telecaster" type="AudioStreamPlayer" parent="Board" unique_id=374572979]
+stream = ExtResource("2_3sx0t")
+volume_db = -5.0
+
+[node name="Mystic" type="AudioStreamPlayer" parent="Board" unique_id=316076962]
+stream = ExtResource("2_188bi")
+volume_db = -8.0
+
+[node name="asdf" type="AudioStreamPlayer" parent="Board" unique_id=884648190]
+stream = ExtResource("2_8f2av")
+volume_db = -10.0
+
+[node name="Dithered Shores" type="AudioStreamPlayer" parent="Board" unique_id=448978959]
+stream = ExtResource("8_y1t4m")
+volume_db = -4.0
+
+[node name="Holding Pattern" type="AudioStreamPlayer" parent="Board" unique_id=1501734688]
+stream = ExtResource("9_sep7s")
+volume_db = -6.0
+
+[node name="Ego Assembly" type="AudioStreamPlayer" parent="Board" unique_id=1623027715]
+stream = ExtResource("10_ml18x")
+volume_db = -2.0
+
+[node name="Intermission" type="Node" parent="." unique_id=439505288]
+
+[node name="Safel Commissary" type="AudioStreamPlayer" parent="Intermission" unique_id=1004927125]
+stream = ExtResource("11_nu72a")
+volume_db = -10.0
+
+[node name="Welcome to the Lobby" type="AudioStreamPlayer" parent="Intermission" unique_id=907560471]
+stream = ExtResource("11_y3glj")
+volume_db = -4.0
+
+[node name="plaza dreams" type="AudioStreamPlayer" parent="Intermission" unique_id=1885192128]
+stream = ExtResource("12_y3glj")
+
+[node name="Main Menu" type="Node" parent="." unique_id=1621009941]
+
+[node name="Pause" type="Node" parent="." unique_id=2035973084]

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="VirusChoice" format=3 uid="uid://cccjfyymwqkix"]
+
+[ext_resource type="Script" uid="uid://cqac0q3lkmb7l" path="res://scripts/resources/virus choices/virus_choice.gd" id="1_rbxc1"]
+[ext_resource type="Texture2D" uid="uid://cdg0qumeglxs0" path="res://assets/sprites/viruses/content.png" id="2_73ebi"]
+
+[resource]
+script = ExtResource("1_rbxc1")
+texture = ExtResource("2_73ebi")
+name = "Content"
+description = "Spawns little hearts that explode if left untouched. Click on one 3 times to remove it"
+bit_gain = 700
+stack = 1
+level = 5
+metadata/_custom_type_script = "uid://cqac0q3lkmb7l"
