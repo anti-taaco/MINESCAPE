@@ -1,7 +1,7 @@
 [gd_resource type="Resource" format=3 uid="uid://ddo03o3j6jl71"]
 
 [ext_resource type="Script" uid="uid://dj04cj64qul3x" path="res://scripts/bugs/ocd.gd" id="1_k42mb"]
-[ext_resource type="Texture2D" uid="uid://b52ubawxdo67x" path="res://assets/sprites/flag.png" id="2_k42mb"]
+[ext_resource type="Texture2D" uid="uid://b52ubawxdo67x" path="res://assets/images/board/tiles/flag.png" id="2_k42mb"]
 
 [resource]
 script = ExtResource("1_k42mb")

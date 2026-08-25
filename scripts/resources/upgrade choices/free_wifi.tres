@@ -1,7 +1,7 @@
 [gd_resource type="Resource" format=3 uid="uid://2anr53yg7tj6"]
 
 [ext_resource type="Script" uid="uid://ttffgmjp841g" path="res://scripts/upgrades/free_wifi.gd" id="1_rhmex"]
-[ext_resource type="Texture2D" uid="uid://d4x6xh3mjlm8" path="res://assets/sprites/opened_tile.png" id="2_rhmex"]
+[ext_resource type="Texture2D" uid="uid://d4x6xh3mjlm8" path="res://assets/images/board/tiles/opened_tile.png" id="2_rhmex"]
 
 [resource]
 script = ExtResource("1_rhmex")

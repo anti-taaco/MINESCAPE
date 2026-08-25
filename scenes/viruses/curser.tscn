@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bxstr27y8y4lq"]
 
 [ext_resource type="Script" uid="uid://dsg3i5tk1wrwu" path="res://scripts/viruses/curser.gd" id="1_fv552"]
-[ext_resource type="Texture2D" uid="uid://bd0k2x84soj2u" path="res://assets/sprites/viruses/curser.png" id="2_fv552"]
+[ext_resource type="Texture2D" uid="uid://bd0k2x84soj2u" path="res://assets/images/viruses/curser.png" id="2_fv552"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fv552"]
 size = Vector2(119.999985, 119.999985)

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" format=3 uid="uid://wc5d5n8bie5k"]
 
 [ext_resource type="Script" uid="uid://drjvwggdioq4s" path="res://scripts/upgrades/first_blood.gd" id="1_bj3bv"]
-[ext_resource type="Texture2D" uid="uid://b52ubawxdo67x" path="res://assets/sprites/flag.png" id="2_mxswe"]
+[ext_resource type="Texture2D" uid="uid://b52ubawxdo67x" path="res://assets/images/board/tiles/flag.png" id="2_mxswe"]
 
 [resource]
 script = ExtResource("1_bj3bv")

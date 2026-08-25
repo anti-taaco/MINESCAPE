@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://b2c2pkuaqcbvk" path="res://scripts/player/player.gd" id="1_qlg0r"]
 [ext_resource type="Resource" uid="uid://dtjuwrl31lmqk" path="res://scripts/resources/classes/sweeper.tres" id="2_75vfm"]
 [ext_resource type="Script" uid="uid://o6ekr1diueta" path="res://scripts/player/camera.gd" id="3_qlg0r"]
-[ext_resource type="Texture2D" uid="uid://c3uw8e0yi0jgy" path="res://assets/sprites/tile.png" id="5_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://c3uw8e0yi0jgy" path="res://assets/images/board/tiles/tile.png" id="5_qlg0r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_75vfm"]
 size = Vector2(2, 2)

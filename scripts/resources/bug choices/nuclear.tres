@@ -1,7 +1,7 @@
 [gd_resource type="Resource" format=3 uid="uid://bg467c8ramteu"]
 
 [ext_resource type="Script" uid="uid://d0gkd6eiyeiu0" path="res://scripts/bugs/nuclear.gd" id="1_db1c2"]
-[ext_resource type="Texture2D" uid="uid://djkb052jtsyim" path="res://assets/sprites/mine.png" id="2_oll6u"]
+[ext_resource type="Texture2D" uid="uid://djkb052jtsyim" path="res://assets/images/board/tiles/mine.png" id="2_oll6u"]
 
 [resource]
 script = ExtResource("1_db1c2")

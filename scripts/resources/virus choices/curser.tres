@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="VirusChoice" format=3 uid="uid://dj0wd130nhpgr"]
 
 [ext_resource type="Script" uid="uid://cqac0q3lkmb7l" path="res://scripts/resources/virus choices/virus_choice.gd" id="1_yhxko"]
-[ext_resource type="Texture2D" uid="uid://bd0k2x84soj2u" path="res://assets/sprites/viruses/curser.png" id="2_p1hnl"]
+[ext_resource type="Texture2D" uid="uid://bd0k2x84soj2u" path="res://assets/images/viruses/curser.png" id="2_p1hnl"]
 
 [resource]
 script = ExtResource("1_yhxko")

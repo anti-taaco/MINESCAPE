@@ -1,7 +1,7 @@
 [gd_resource type="Resource" format=3 uid="uid://bmgj1tpsnkxq0"]
 
 [ext_resource type="Script" uid="uid://d4d7m1rnvjo5v" path="res://scripts/upgrades/rebooting.gd" id="1_w422s"]
-[ext_resource type="Texture2D" uid="uid://b52ubawxdo67x" path="res://assets/sprites/flag.png" id="2_w422s"]
+[ext_resource type="Texture2D" uid="uid://b52ubawxdo67x" path="res://assets/images/board/tiles/flag.png" id="2_w422s"]
 
 [resource]
 script = ExtResource("1_w422s")

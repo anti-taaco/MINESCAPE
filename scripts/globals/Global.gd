@@ -84,7 +84,19 @@ func full_screen(current_mode):
 		get_window().mode = current_mode
 	else:
 		get_window().mode = get_window().MODE_FULLSCREEN
+		
+var screenshot: ImageTexture
+func take_screenshot():
+	print("take screenshot")
+	var img = get_viewport().get_texture().get_image()
+	screenshot = ImageTexture.create_from_image(img)
+	var file_path = "res://assets/screenshot/game_screen.png"
+	
 
+func delete_screenshots():
+	for file in DirAccess.get_files_at("res://assets/screenshot/"):  
+		DirAccess.remove_absolute(file)
+	
 func _notification(what):
 	if what == NOTIFICATION_WM_MOUSE_ENTER:
 		mouse_outside = false

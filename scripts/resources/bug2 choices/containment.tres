@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Bug2Choice" format=3 uid="uid://8hlnyn4fvp6m"]
 
 [ext_resource type="Script" uid="uid://30jls4jvhmj0" path="res://scripts/resources/bug2 choices/bug2_choice.gd" id="1_t6p7k"]
-[ext_resource type="Texture2D" uid="uid://d4x6xh3mjlm8" path="res://assets/sprites/opened_tile.png" id="2_qyerh"]
+[ext_resource type="Texture2D" uid="uid://d4x6xh3mjlm8" path="res://assets/images/board/tiles/opened_tile.png" id="2_qyerh"]
 
 [resource]
 script = ExtResource("1_t6p7k")

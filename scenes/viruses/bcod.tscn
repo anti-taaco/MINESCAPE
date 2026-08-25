@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dg87hv010tuva"]
 
 [ext_resource type="Script" uid="uid://clsh5lxk7321u" path="res://scripts/viruses/bcod.gd" id="1_w8eff"]
-[ext_resource type="Texture2D" uid="uid://2idjqxlum0h1" path="res://assets/sprites/viruses/bcod.png" id="2_fpqgw"]
+[ext_resource type="Texture2D" uid="uid://2idjqxlum0h1" path="res://assets/images/viruses/bcod.png" id="2_fpqgw"]
 
 [node name="Blue Circle of Death" type="CharacterBody2D" unique_id=1500098147]
 script = ExtResource("1_w8eff")

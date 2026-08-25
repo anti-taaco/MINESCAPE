@@ -1,7 +1,7 @@
 [gd_resource type="Resource" format=3 uid="uid://da2m1nq2twea2"]
 
 [ext_resource type="Script" uid="uid://dua37m6rjb2e0" path="res://scripts/bugs/processor.gd" id="1_0fyd0"]
-[ext_resource type="Texture2D" uid="uid://2idjqxlum0h1" path="res://assets/sprites/viruses/bcod.png" id="2_0fyd0"]
+[ext_resource type="Texture2D" uid="uid://2idjqxlum0h1" path="res://assets/images/viruses/bcod.png" id="2_0fyd0"]
 
 [resource]
 script = ExtResource("1_0fyd0")

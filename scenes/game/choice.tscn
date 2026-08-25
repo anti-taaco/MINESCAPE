@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dj1f35jtsqh4c"]
+
+[ext_resource type="Script" uid="uid://dv1b4krvg3lfb" path="res://scripts/ui/choice.gd" id="1_ycxmd"]
+[ext_resource type="Texture2D" uid="uid://dm3ifv6kcwpbj" path="res://icon.svg" id="2_yhyp7"]
+[ext_resource type="Script" uid="uid://crxyc04jdamwl" path="res://scripts/ui/tooltip_interact.gd" id="3_jt4bu"]
+[ext_resource type="PackedScene" uid="uid://bududrfc7evub" path="res://scenes/ui/tooltip.tscn" id="4_827pk"]
+
+[node name="Choice" type="Control" unique_id=1963501307]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ycxmd")
+
+[node name="Name_Label" type="Label" parent="." unique_id=1895912181]
+layout_mode = 0
+offset_left = -35.0
+offset_top = -105.0
+offset_right = 35.0
+offset_bottom = -82.0
+theme_override_font_sizes/font_size = 12
+text = "name"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=425276214]
+layout_mode = 0
+offset_left = -40.0
+offset_top = -81.0
+offset_right = 40.0
+offset_bottom = -1.0
+color = Color(1, 1, 1, 0.5)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=762984332]
+layout_mode = 0
+offset_left = -35.0
+offset_top = -76.0
+offset_right = 35.0
+offset_bottom = -6.0
+texture = ExtResource("2_yhyp7")
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("3_jt4bu")
+
+[node name="Tooltip" parent="TextureRect" unique_id=627843056 instance=ExtResource("4_827pk")]
+visible = false
+layout_mode = 0
+
+[node name="Button" type="Button" parent="." unique_id=938520286]
+layout_mode = 0
+offset_left = -40.0
+offset_top = 14.0
+offset_right = 40.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 14
+text = "test"
+clip_text = true
+icon_alignment = 1
+
+[connection signal="mouse_entered" from="TextureRect" to="TextureRect/Tooltip" method="toggle" binds= [true]]
+[connection signal="mouse_exited" from="TextureRect" to="." method="_on_texture_rect_mouse_exited"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

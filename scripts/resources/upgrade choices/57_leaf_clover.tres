@@ -1,7 +1,7 @@
 [gd_resource type="Resource" format=3 uid="uid://bb5b47w7uk0xc"]
 
 [ext_resource type="Script" uid="uid://c2j3yhurb8l3g" path="res://scripts/upgrades/57_leaf_clover.gd" id="1_0281y"]
-[ext_resource type="Texture2D" uid="uid://fc6iivavfq36" path="res://assets/sprites/seven.png" id="2_0281y"]
+[ext_resource type="Texture2D" uid="uid://fc6iivavfq36" path="res://assets/images/board/tiles/seven.png" id="2_0281y"]
 
 [resource]
 script = ExtResource("1_0281y")

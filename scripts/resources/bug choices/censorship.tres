@@ -1,7 +1,7 @@
 [gd_resource type="Resource" format=3 uid="uid://ojhai573yvlv"]
 
 [ext_resource type="Script" uid="uid://c5qvu7mcl3r8" path="res://scripts/bugs/censorship.gd" id="1_oh7uu"]
-[ext_resource type="Texture2D" uid="uid://c0acyr8wg1fv6" path="res://assets/sprites/smile.png" id="2_oh7uu"]
+[ext_resource type="Texture2D" uid="uid://c0acyr8wg1fv6" path="res://assets/images/board/tiles/smile.png" id="2_oh7uu"]
 
 [resource]
 script = ExtResource("1_oh7uu")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="VirusChoice" format=3 uid="uid://ybbqman653yv"]
+
+[ext_resource type="Script" uid="uid://cqac0q3lkmb7l" path="res://scripts/resources/virus choices/virus_choice.gd" id="1_pbx8e"]
+
+[resource]
+script = ExtResource("1_pbx8e")
+name = "Mah Lazar"
+description = "Fires lasers across the screen"
+can_choose = false
+metadata/_custom_type_script = "uid://cqac0q3lkmb7l"

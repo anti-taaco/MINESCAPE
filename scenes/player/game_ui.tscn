@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dfl0kt03lc0xc"]
 
 [ext_resource type="Script" uid="uid://bchg2wyyebrhp" path="res://scripts/player/game_ui.gd" id="1_yubou"]
-[ext_resource type="Texture2D" uid="uid://cg3xnlem6l3rk" path="res://assets/ui/board_upbar.png" id="2_hmndv"]
-[ext_resource type="Texture2D" uid="uid://bffj0ea0qwd88" path="res://assets/ui/board_upbar_mid.png" id="3_p4jm6"]
+[ext_resource type="Texture2D" uid="uid://cg3xnlem6l3rk" path="res://assets/images/board/ui/board_upbar.png" id="2_hmndv"]
+[ext_resource type="Texture2D" uid="uid://bffj0ea0qwd88" path="res://assets/images/board/ui/board_upbar_mid.png" id="3_p4jm6"]
 
 [node name="GameUI" type="CanvasLayer" unique_id=789943783]
 layer = -1

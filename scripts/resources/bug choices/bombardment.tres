@@ -1,7 +1,7 @@
 [gd_resource type="Resource" format=3 uid="uid://b5v8dw2iaoetr"]
 
 [ext_resource type="Script" uid="uid://c8i3i07fsrhx0" path="res://scripts/bugs/bombardment.gd" id="1_jsh7r"]
-[ext_resource type="Texture2D" uid="uid://2idjqxlum0h1" path="res://assets/sprites/viruses/bcod.png" id="2_jsh7r"]
+[ext_resource type="Texture2D" uid="uid://2idjqxlum0h1" path="res://assets/images/viruses/bcod.png" id="2_jsh7r"]
 
 [resource]
 script = ExtResource("1_jsh7r")

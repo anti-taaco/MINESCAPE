@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://sxsg0q306ka7"]
 
 [ext_resource type="Script" uid="uid://cimhjkcuxi535" path="res://scripts/viruses/tetromino.gd" id="1_lbtje"]
-[ext_resource type="Texture2D" uid="uid://c3uw8e0yi0jgy" path="res://assets/sprites/tile.png" id="2_pam13"]
+[ext_resource type="Texture2D" uid="uid://c3uw8e0yi0jgy" path="res://assets/images/board/tiles/tile.png" id="2_pam13"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pam13"]
 size = Vector2(18.666668, 18.666668)

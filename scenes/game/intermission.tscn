@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://bs3igk8qgq6mp"]
+
+[ext_resource type="Script" uid="uid://bajq56feqosl0" path="res://scripts/game/intermission.gd" id="1_jg2gj"]
+[ext_resource type="Texture2D" uid="uid://do7kx5ng0nvep" path="res://assets/images/shop/shop_table.png" id="2_0as5n"]
+[ext_resource type="Texture2D" uid="uid://bsruwto7p3fov" path="res://assets/images/shop/leet/leet_idle.png" id="3_q3sny"]
+[ext_resource type="Texture2D" uid="uid://bwe8il7i8ncjb" path="res://assets/images/shop/leet/leet_reroll.png" id="4_70q1u"]
+[ext_resource type="PackedScene" uid="uid://dj1f35jtsqh4c" path="res://scenes/game/choice.tscn" id="5_4dpsl"]
+[ext_resource type="PackedScene" uid="uid://biyyxgkplyof" path="res://scenes/game/bg_music.tscn" id="6_xvilb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6b8fk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_q3sny")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_70q1u")
+}],
+"loop": true,
+"name": &"reroll",
+"speed": 5.0
+}]
+
+[node name="Intermission" type="Node2D" unique_id=879600448]
+script = ExtResource("1_jg2gj")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=298288769]
+z_index = 2
+offset_right = 480.0
+offset_bottom = 270.0
+expand_mode = 3
+stretch_mode = 6
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=668038567]
+layer = -1
+
+[node name="Table" type="TextureRect" parent="CanvasLayer" unique_id=778640645]
+offset_right = 480.0
+offset_bottom = 270.0
+texture = ExtResource("2_0as5n")
+
+[node name="Leet" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=152812051]
+position = Vector2(240, 135)
+sprite_frames = SubResource("SpriteFrames_6b8fk")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Label" type="Label" parent="." unique_id=1302776457]
+offset_left = 19.0
+offset_top = 204.0
+offset_right = 59.0
+offset_bottom = 227.0
+text = "LEVEL"
+
+[node name="Label2" type="Label" parent="." unique_id=1571961194]
+offset_left = 22.0
+offset_top = 238.0
+offset_right = 62.0
+offset_bottom = 261.0
+text = "BITS"
+
+[node name="Selection" type="Control" parent="." unique_id=2010845181]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Choice1" parent="Selection" unique_id=1963501307 instance=ExtResource("5_4dpsl")]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 143.0
+offset_right = 239.0
+offset_bottom = 143.0
+
+[node name="Choice2" parent="Selection" unique_id=549711247 instance=ExtResource("5_4dpsl")]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 141.0
+offset_right = 430.0
+offset_bottom = 141.0
+
+[node name="Choice3" parent="Selection" unique_id=453665479 instance=ExtResource("5_4dpsl")]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 141.0
+offset_right = 336.0
+offset_bottom = 141.0
+
+[node name="BG Music" parent="." unique_id=265166352 instance=ExtResource("6_xvilb")]
+
+[node name="Continue" type="Button" parent="." unique_id=154973690]
+visible = false
+offset_left = 303.0
+offset_top = 214.0
+offset_right = 382.0
+offset_bottom = 245.0
+text = "Continue"
+
+[node name="Reroll" type="Button" parent="." unique_id=1191426515]
+offset_left = 34.0
+offset_top = 42.0
+offset_right = 90.0
+offset_bottom = 73.0
+text = "Reroll"
+
+[connection signal="button_up" from="Continue" to="." method="_on_continue_button_up"]
+[connection signal="button_down" from="Reroll" to="." method="_on_reroll_button_down"]
+[connection signal="button_up" from="Reroll" to="." method="_on_reroll_button_up"]

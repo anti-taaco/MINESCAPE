@@ -1,7 +1,7 @@
 [gd_resource type="Resource" format=3 uid="uid://u2tqvea6tn1h"]
 
 [ext_resource type="Script" uid="uid://dram38h8i2d6k" path="res://scripts/upgrades/system_2_boogaloo.gd" id="1_v177p"]
-[ext_resource type="Texture2D" uid="uid://c0acyr8wg1fv6" path="res://assets/sprites/smile.png" id="2_v177p"]
+[ext_resource type="Texture2D" uid="uid://c0acyr8wg1fv6" path="res://assets/images/board/tiles/smile.png" id="2_v177p"]
 
 [resource]
 script = ExtResource("1_v177p")

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://2yo471atdvbn"]
 
 [ext_resource type="Script" uid="uid://ch4gwpn7dm4a4" path="res://scripts/viruses/nyan_cat.gd" id="1_6btq3"]
-[ext_resource type="Texture2D" uid="uid://ddwuy784130hl" path="res://assets/sprites/viruses/nyan_cat.png" id="2_8mung"]
-[ext_resource type="Texture2D" uid="uid://g7ocsjdwfvm3" path="res://assets/sprites/viruses/nyan_cat rainbow.png" id="2_kox37"]
+[ext_resource type="Texture2D" uid="uid://ddwuy784130hl" path="res://assets/images/viruses/nyan_cat.png" id="2_8mung"]
+[ext_resource type="Texture2D" uid="uid://g7ocsjdwfvm3" path="res://assets/images/viruses/nyan_cat rainbow.png" id="2_kox37"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8mung"]
 size = Vector2(12, 12)

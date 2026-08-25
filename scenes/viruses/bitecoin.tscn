@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://2vmxq0ig8byx"]
 
-[ext_resource type="Texture2D" uid="uid://dvimxri4vd52d" path="res://assets/sprites/viruses/bitecoin_attack.png" id="1_d0qi5"]
+[ext_resource type="Texture2D" uid="uid://dvimxri4vd52d" path="res://assets/images/viruses/bitecoin_attack.png" id="1_d0qi5"]
 [ext_resource type="Script" uid="uid://b10rhkvm51pys" path="res://scripts/viruses/bitecoin.gd" id="1_ieqwn"]
-[ext_resource type="Texture2D" uid="uid://bhq8gokp1d2ku" path="res://assets/sprites/viruses/bitecoin_idle.png" id="2_ieqwn"]
+[ext_resource type="Texture2D" uid="uid://bhq8gokp1d2ku" path="res://assets/images/viruses/bitecoin_idle.png" id="2_ieqwn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dxm6q"]
 animations = [{
