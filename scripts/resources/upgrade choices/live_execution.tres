@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3 uid="uid://cm75oxw8fo13e"]
+
+[ext_resource type="Script" uid="uid://qv8sunrwmxv3" path="res://scripts/upgrades/live_execution.gd" id="1_pt1wt"]
+[ext_resource type="Texture2D" uid="uid://br3lqnpvkemdq" path="res://assets/images/icons/upgrades/dust.png" id="2_pt1wt"]
+
+[resource]
+script = ExtResource("1_pt1wt")
+texture = ExtResource("2_pt1wt")
+name = "live execution"
+description = "good bye bro"
+bit_cost = 666
+can_choose = false
+metadata/_custom_type_script = "uid://dtcf5w6l6py6a"

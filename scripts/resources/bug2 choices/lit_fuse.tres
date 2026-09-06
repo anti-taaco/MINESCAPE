@@ -1,6 +1,6 @@
 [gd_resource type="Resource" format=3 uid="uid://0b21jf4bf8er"]
 
-[ext_resource type="Script" uid="uid://b6kwwdnk0bukk" path="res://scripts/bugs2/lit_fuse.gd" id="1_5u15f"]
+[ext_resource type="Script" uid="uid://b6kwwdnk0bukk" path="res://scripts/bugs/lit_fuse.gd" id="1_5u15f"]
 [ext_resource type="Texture2D" uid="uid://c3uw8e0yi0jgy" path="res://assets/images/board/tiles/tile.png" id="2_5u15f"]
 
 [resource]

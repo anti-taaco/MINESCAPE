@@ -1,6 +1,6 @@
 [gd_resource type="Resource" format=3 uid="uid://b2guhq1jgu6u5"]
 
-[ext_resource type="Script" uid="uid://dfccla0yi2cv8" path="res://scripts/bugs2/one_less_choice.gd" id="1_vn5nw"]
+[ext_resource type="Script" uid="uid://dfccla0yi2cv8" path="res://scripts/bugs/media_illiteracy.gd" id="1_vn5nw"]
 [ext_resource type="Texture2D" uid="uid://bk4106a1wtq0w" path="res://assets/images/board/tiles/two.png" id="2_vn5nw"]
 
 [resource]

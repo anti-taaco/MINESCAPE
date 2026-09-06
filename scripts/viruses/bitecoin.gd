@@ -9,11 +9,11 @@ var speed = 600
 var direction
 var pos
 var pos_points : Array
-var bits_taken : int = 300
+var bits_taken : int = 400
 
 var time : Array = [0,0,0]
-var attack_time : float = 120
-var prepare_duration : float = 30
+var attack_time : float = 160
+var prepare_duration : float = 40
 var attack_duration : float = 15
 var active = false
 var attacking = false
@@ -50,6 +50,7 @@ func _physics_process(delta: float) -> void:
 		sprite.flip_v = true
 	
 	if time[0] > attack_time * delta and not active:
+		Audio.bitecoin_active()
 		look_at(pos)
 		direction = global_position.direction_to(pos)
 		create_visual_indicator(delta)
@@ -90,13 +91,13 @@ func delete_visuals():
 	pos_points.resize(int(attack_duration) )
 
 func randomize_times():
-	attack_time = Global.favorable_rng(40, 80, Modifiers.luck_factor, 2, 2)
+	attack_time = Global.favorable_rng(40, 100, Modifiers.luck_factor, 2, 2)
 
 func _on_area_2d_mouse_entered() -> void:
 	print("Bitecoin hit")
+	Audio.bitecoin_hit()
 	if Global.bits >= bits_taken and not player.invincible:
 		Global.bits -= bits_taken
-		Audio.player_hit()
 	else: if Global.bits < bits_taken:
 		Global.bits = 0
 		player.take_damage(3, false)

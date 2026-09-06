@@ -1,25 +1,26 @@
 [gd_scene format=3 uid="uid://biyyxgkplyof"]
 
 [ext_resource type="Script" uid="uid://blwvqjwk2fvu4" path="res://scripts/game/bg_music.gd" id="1_f6gl3"]
-[ext_resource type="AudioStream" uid="uid://0eg8omclki8" path="res://assets/audio/music/telecaster (ft. palm) - untitled tag game OST - hazerred.mp3" id="2_3sx0t"]
-[ext_resource type="AudioStream" uid="uid://cdxwwq7vuiigr" path="res://assets/audio/music/Something Evil Will Happen OST - asdf - nicopatty.mp3" id="2_8f2av"]
-[ext_resource type="AudioStream" uid="uid://b8175erau0cj7" path="res://assets/audio/music/Field of Flowers - rundown.mp3" id="2_8rjbd"]
-[ext_resource type="AudioStream" uid="uid://c1qidx6b3ksdx" path="res://assets/audio/music/A Block’s Journey - Mystic (Subarea Theme) - Typically.mp3" id="2_188bi"]
-[ext_resource type="AudioStream" uid="uid://c27b0r3omk7nc" path="res://assets/audio/music/The Temple of the Red Sun - Block Tales OST - UnknownNamedGuy.mp3" id="2_bw4eu"]
-[ext_resource type="AudioStream" uid="uid://6jx6sffh1uq6" path="res://assets/audio/music/Nome da musica - Windows96.mp3" id="3_cvk53"]
-[ext_resource type="AudioStream" uid="uid://bif345sg8wgjw" path="res://assets/audio/music/Dithered Shores - Xploshi.mp3" id="8_y1t4m"]
-[ext_resource type="AudioStream" uid="uid://boq0bb8pouyh1" path="res://assets/audio/music/Home - Holding Pattern.mp3" id="9_sep7s"]
-[ext_resource type="AudioStream" uid="uid://ddkvx1j168lfm" path="res://assets/audio/music/Ego Assembly - James Primate.mp3" id="10_ml18x"]
-[ext_resource type="AudioStream" uid="uid://cp3gt3iacaf48" path="res://assets/audio/music/Meleeniacs OST - Safel Commissary - nicopatty.mp3" id="11_nu72a"]
-[ext_resource type="AudioStream" uid="uid://bbqsedww3xiak" path="res://assets/audio/music/WAYFARER - Welcome to the lobby.mp3" id="11_y3glj"]
-[ext_resource type="AudioStream" uid="uid://cr7vvn7fb74vt" path="res://assets/audio/music/plaza dreams __ CVLTVRΣ.mp3" id="12_y3glj"]
+[ext_resource type="AudioStream" uid="uid://0eg8omclki8" path="res://assets/audio/music/board/telecaster (ft. palm) - untitled tag game OST - hazerred.mp3" id="2_3sx0t"]
+[ext_resource type="AudioStream" uid="uid://cdxwwq7vuiigr" path="res://assets/audio/music/board/Something Evil Will Happen OST - asdf - nicopatty.mp3" id="2_8f2av"]
+[ext_resource type="AudioStream" uid="uid://b8175erau0cj7" path="res://assets/audio/music/board/Field of Flowers - rundown.mp3" id="2_8rjbd"]
+[ext_resource type="AudioStream" uid="uid://c1qidx6b3ksdx" path="res://assets/audio/music/board/A Block’s Journey - Mystic (Subarea Theme) - Typically.mp3" id="2_188bi"]
+[ext_resource type="AudioStream" uid="uid://c27b0r3omk7nc" path="res://assets/audio/music/board/The Temple of the Red Sun - Block Tales OST - UnknownNamedGuy.mp3" id="2_bw4eu"]
+[ext_resource type="AudioStream" uid="uid://6jx6sffh1uq6" path="res://assets/audio/music/board/Nome da musica - Windows96.mp3" id="3_cvk53"]
+[ext_resource type="AudioStream" uid="uid://bif345sg8wgjw" path="res://assets/audio/music/board/Dithered Shores - Xploshi.mp3" id="8_y1t4m"]
+[ext_resource type="AudioStream" uid="uid://boq0bb8pouyh1" path="res://assets/audio/music/board/Home - Holding Pattern.mp3" id="9_sep7s"]
+[ext_resource type="AudioStream" uid="uid://ddkvx1j168lfm" path="res://assets/audio/music/board/Ego Assembly - James Primate.mp3" id="10_ml18x"]
+[ext_resource type="AudioStream" uid="uid://cs0g2ttldpq04" path="res://assets/audio/music/board/Drop Cap - Pronoun Palace.mp3" id="11_08c20"]
+[ext_resource type="AudioStream" uid="uid://cp3gt3iacaf48" path="res://assets/audio/music/intermission/Meleeniacs OST - Safel Commissary - nicopatty.mp3" id="11_nu72a"]
+[ext_resource type="AudioStream" uid="uid://bbqsedww3xiak" path="res://assets/audio/music/intermission/WAYFARER - Welcome to the lobby.mp3" id="11_y3glj"]
+[ext_resource type="AudioStream" uid="uid://jctqqdttimbx" path="res://assets/audio/music/intermission/I Really Don't Want to be here Right Now - Torva.mp3" id="11_ysng3"]
+[ext_resource type="AudioStream" uid="uid://cdqselprdhu21" path="res://assets/audio/music/board/PLUG AND PRAY - Lunaxis.mp3" id="12_ecf6v"]
+[ext_resource type="AudioStream" uid="uid://cr7vvn7fb74vt" path="res://assets/audio/music/intermission/plaza dreams __ CVLTVRΣ.mp3" id="12_y3glj"]
+[ext_resource type="AudioStream" uid="uid://bsbtm6m3t2vr1" path="res://assets/audio/music/game over/Claude Debussy - Clair de lune (From Twilight).mp3" id="17_ecf6v"]
 
-[node name="BG Music" type="AudioStreamPlayer2D" unique_id=265166352 node_paths=PackedStringArray("board", "intermission", "pause")]
+[node name="BG Music" type="AudioStreamPlayer2D" unique_id=265166352]
 bus = &"Music"
 script = ExtResource("1_f6gl3")
-board = NodePath("Board")
-intermission = NodePath("Intermission")
-pause = NodePath("Pause")
 
 [node name="Board" type="Node" parent="." unique_id=695406372]
 
@@ -59,7 +60,19 @@ volume_db = -6.0
 stream = ExtResource("10_ml18x")
 volume_db = -2.0
 
+[node name="Drop Cap" type="AudioStreamPlayer" parent="Board" unique_id=1292551917]
+stream = ExtResource("11_08c20")
+volume_db = -8.0
+
+[node name="PLUG AND PRAY" type="AudioStreamPlayer" parent="Board" unique_id=1044544747]
+stream = ExtResource("12_ecf6v")
+volume_db = -12.0
+
 [node name="Intermission" type="Node" parent="." unique_id=439505288]
+
+[node name="I Really Don\'t Want to be here Right Now" type="AudioStreamPlayer" parent="Intermission" unique_id=491412723]
+stream = ExtResource("11_ysng3")
+volume_db = -5.0
 
 [node name="Safel Commissary" type="AudioStreamPlayer" parent="Intermission" unique_id=1004927125]
 stream = ExtResource("11_nu72a")
@@ -75,3 +88,9 @@ stream = ExtResource("12_y3glj")
 [node name="Main Menu" type="Node" parent="." unique_id=1621009941]
 
 [node name="Pause" type="Node" parent="." unique_id=2035973084]
+
+[node name="Game Over" type="Node" parent="." unique_id=1650012402]
+
+[node name="Clair De Lune" type="AudioStreamPlayer" parent="Game Over" unique_id=780160346]
+stream = ExtResource("17_ecf6v")
+volume_db = -4.0

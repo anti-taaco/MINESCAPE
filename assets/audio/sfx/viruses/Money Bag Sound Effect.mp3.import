@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bmnwlre65ig3p"
+path="res://.godot/imported/Money Bag Sound Effect.mp3-8abe3138cdbc0124f028822631b96f96.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sfx/viruses/Money Bag Sound Effect.mp3"
+dest_files=["res://.godot/imported/Money Bag Sound Effect.mp3-8abe3138cdbc0124f028822631b96f96.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

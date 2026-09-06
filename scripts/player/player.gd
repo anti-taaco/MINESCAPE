@@ -20,11 +20,14 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if i_frames <= max_frames * delta:
 		i_frames += delta
+		Input.set_default_cursor_shape(Input.CURSOR_WAIT)
 		invincible = true
 	else:
+		if Input.get_current_cursor_shape() == Input.CURSOR_WAIT:
+			Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 		invincible = false
 	
-	if above_max_lives():
+	if lives > max_lives:
 		lives = max_lives
 		
 func take_damage(dmg : int, bypass : bool):
@@ -38,9 +41,3 @@ func take_damage(dmg : int, bypass : bool):
 		Audio.player_hit()
 	else:
 		print("invincible")
-
-func above_max_lives():
-	if lives > max_lives:
-		return true
-	else:
-		return false

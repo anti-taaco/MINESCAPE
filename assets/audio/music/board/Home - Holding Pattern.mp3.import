@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://boq0bb8pouyh1"
+path="res://.godot/imported/Home - Holding Pattern.mp3-48c745418588b7b26a3ceef370b42fda.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/board/Home - Holding Pattern.mp3"
+dest_files=["res://.godot/imported/Home - Holding Pattern.mp3-48c745418588b7b26a3ceef370b42fda.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

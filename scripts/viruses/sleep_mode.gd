@@ -8,7 +8,7 @@ var camera: Node2D
 var time : Array = [0,0,0]
 var spawn_time : float
 var duration : float = 150
-var open_duration : float = 10 * Modifiers.sleep_awake_multiplier
+var open_duration : float = 6 * Modifiers.sleep_awake_multiplier
 var active = false
 var open = false
 

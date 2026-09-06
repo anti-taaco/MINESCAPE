@@ -3,11 +3,20 @@
 [ext_resource type="Script" uid="uid://blv5nucgtdyw6" path="res://scripts/ui/tooltip.gd" id="1_7dicn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7dicn"]
-content_margin_left = 5.0
-content_margin_top = 5.0
-content_margin_right = 5.0
-content_margin_bottom = 5.0
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
 bg_color = Color(1, 0, 0, 0.6)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.52508664, 0, 0, 0.75000006)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [node name="Tooltip" type="PanelContainer" unique_id=627843056]
 top_level = true
@@ -20,6 +29,7 @@ script = ExtResource("1_7dicn")
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=673467552]
 layout_mode = 2
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 6
+theme_override_constants/line_separation = -2
+theme_override_font_sizes/normal_font_size = 4
 text = "text"
 scroll_active = false

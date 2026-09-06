@@ -1,8 +1,10 @@
 extends Node2D
 
 var playlist = "Game"
-var time_elapsed : float
+var instant_play = true
+var can_play = true
 
+var time_elapsed : float
 var game_over : bool = false
 var game_won : bool = false
 
@@ -23,9 +25,6 @@ func _ready() -> void:
 	
 	for virus in Global.virus_list:
 		$Viruses.add_child(Global.virus_to_node(virus) )
-	if Modifiers.transparent_viruses:
-		for virus in $Viruses.get_children():
-			virus.modulate.a = 0.5
 	
 	var curser_count = Global.count_amount(Global.virus_list, "curser")
 	if curser_count >= 1:
@@ -53,6 +52,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if Modifiers.transparent_viruses:
+		for virus in $Viruses.get_children():
+			if virus.modulate.a > 0.5:
+				virus.modulate.a = 0.5
+	
 	if Global.mouse_outside:
 		get_tree().paused = true
 	
@@ -69,7 +73,10 @@ func _process(delta: float) -> void:
 		Global.take_screenshot()
 		Global.level += 1
 		Global.board_scaling()
-		get_tree().change_scene_to_file("res://scenes/intermission.tscn")
+		get_tree().change_scene_to_file("res://scenes/game/intermission.tscn")
+	else: if game_over and not game_won:
+		Global.take_screenshot()
+		get_tree().change_scene_to_file("res://scenes/game/game_over.tscn")
 
 func random_enemy_spawning(delta : float, num : int):
 	if timer <= random_spawn_cd * delta:

@@ -1,11 +1,15 @@
 extends AudioStreamPlayer2D
 
-@export var board: Node
-@export var intermission: Node
-@export var main_menu: Node
-@export var pause: Node
+@onready var board: Node = $Board
+@onready var intermission: Node = $Intermission
+@onready var main_menu: Node
+@onready var pause: Node
+@onready var game_over: Node = $"Game Over"
 
 var song
+var playlist
+var instant_play : bool
+var can_play : bool = true
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
@@ -13,18 +17,24 @@ func _ready() -> void:
 		for sound in category.get_children():
 			sound.bus = bus
 	
-	var playlist = get_tree().get_current_scene().playlist
+	playlist = get_tree().get_current_scene().playlist
+	instant_play = get_tree().get_current_scene().instant_play
 	if playlist == "Game":
 		var rand = randi_range(0, board.get_child_count()-1)
 		song = board.get_child(rand)
 	elif playlist == "Intermission":
 		var rand = randi_range(0, intermission.get_child_count()-1)
 		song = intermission.get_child(rand)
-	song.play()
-	if song == $"Nome da musica?":
+	elif playlist == "Game Over":
+		var rand = randi_range(0, game_over.get_child_count()-1)
+		song = game_over.get_child(rand)
+	if instant_play:
+		song.play()
+	if song == $"Board/Nome da musica?":
 		song.seek(10.19)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if not song.playing:
+	can_play = get_tree().get_current_scene().can_play
+	if not song.playing and can_play:
 		song.play()

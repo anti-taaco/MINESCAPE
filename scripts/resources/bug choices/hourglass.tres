@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://dyehuedkny1bv"]
+
+[ext_resource type="Script" uid="uid://b68splhtl7xan" path="res://scripts/bugs/hourglass.gd" id="1_x16y3"]
+[ext_resource type="Texture2D" uid="uid://dm3ifv6kcwpbj" path="res://icon.svg" id="2_x16y3"]
+
+[resource]
+script = ExtResource("1_x16y3")
+texture = ExtResource("2_x16y3")
+name = "Hourglass"
+description = "+2 random Viruses. Adds a temporary random Virus every 30 seconds"
+bit_gain = 1750
+stack = 1
+level = 12
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

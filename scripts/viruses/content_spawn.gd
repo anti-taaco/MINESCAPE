@@ -29,10 +29,12 @@ func _physics_process(delta: float) -> void:
 	else:
 		print("Content hit")
 		player.take_damage(1, true)
+		Audio.content_active_stop()
+		Audio.content_hit()
 		queue_free()
 	
 	if time >= explode_time * delta * 2/3:
-		Audio.sleep_wake()
+		Audio.content_active()
 		sprite.play("breaking")
 	else: if time >= explode_time * delta * 1/3:
 		sprite.play("partially breaking")
@@ -46,12 +48,15 @@ func _physics_process(delta: float) -> void:
 	
 	if clicks >= clicks_required:
 		_on_area_2d_mouse_exited()
+		Audio.content_active_stop()
 		queue_free()
 
 
 func _on_area_2d_mouse_entered() -> void:
 	cursor_inside = true
-
+	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
+	
 
 func _on_area_2d_mouse_exited() -> void:
 	cursor_inside = false
+	Input.set_default_cursor_shape(Input.CURSOR_ARROW)

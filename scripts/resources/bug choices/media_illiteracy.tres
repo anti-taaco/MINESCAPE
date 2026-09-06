@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://yclm5h27x83i"]
+
+[ext_resource type="Script" uid="uid://dfccla0yi2cv8" path="res://scripts/bugs/media_illiteracy.gd" id="1_ccxnw"]
+[ext_resource type="Texture2D" uid="uid://bk4106a1wtq0w" path="res://assets/images/board/tiles/two.png" id="2_ccxnw"]
+
+[resource]
+script = ExtResource("1_ccxnw")
+texture = ExtResource("2_ccxnw")
+name = "Media Illiteracy"
+description = "One less choice in the selection"
+bit_gain = 1250
+stack = 2
+level = 8
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

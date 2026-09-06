@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cdxwwq7vuiigr"
+path="res://.godot/imported/Something Evil Will Happen OST - asdf - nicopatty.mp3-001bf75af0858c8b9529fa964b304bb1.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/board/Something Evil Will Happen OST - asdf - nicopatty.mp3"
+dest_files=["res://.godot/imported/Something Evil Will Happen OST - asdf - nicopatty.mp3-001bf75af0858c8b9529fa964b304bb1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

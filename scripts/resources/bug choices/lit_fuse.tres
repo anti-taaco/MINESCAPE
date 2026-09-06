@@ -1,0 +1,14 @@
+[gd_resource type="Resource" format=3 uid="uid://djg7i2b6pr4om"]
+
+[ext_resource type="Script" uid="uid://b6kwwdnk0bukk" path="res://scripts/bugs/lit_fuse.gd" id="1_d2qy2"]
+[ext_resource type="Texture2D" uid="uid://djkb052jtsyim" path="res://assets/images/board/tiles/mine.png" id="2_y73jk"]
+
+[resource]
+script = ExtResource("1_d2qy2")
+texture = ExtResource("2_y73jk")
+name = "Lit Fuse"
+description = "Take damage if you don't open a tile fast enough"
+bit_gain = 1250
+stack = 1
+level = 8
+metadata/_custom_type_script = "uid://4fhbdwo5gcjn"

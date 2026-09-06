@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cs0g2ttldpq04"
+path="res://.godot/imported/Drop Cap - Pronoun Palace.mp3-e5fe7b64d65569b7dfdffcd721c389cd.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/board/Drop Cap - Pronoun Palace.mp3"
+dest_files=["res://.godot/imported/Drop Cap - Pronoun Palace.mp3-e5fe7b64d65569b7dfdffcd721c389cd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

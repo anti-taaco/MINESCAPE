@@ -58,6 +58,9 @@ var flag_id : int = 1 #Global.p_class.flag_id
 var ab_id : int = 1 #Global.p_class.ability_id
 var alt_id : int = 0 #0
 
+var live_execution : bool = false
+var scene
+
 func _ready() -> void:
 	if Global.p_class:
 		flag_id = Global.p_class.flag_id #Global.p_class.flag_id
@@ -67,4 +70,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	scene = get_tree().get_current_scene()
+	if live_execution and scene:
+		scene.add_child(Global.virus_to_node("nyan_cat.tscn"))

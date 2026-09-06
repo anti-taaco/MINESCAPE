@@ -12,6 +12,11 @@
 [ext_resource type="AudioStream" uid="uid://drfj5idmr8a6i" path="res://assets/audio/sfx/viruses/BSOD Buzzing 44100hz Sound.mp3" id="10_mvwgk"]
 [ext_resource type="AudioStream" uid="uid://kp51tg181jtp" path="res://assets/audio/sfx/viruses/Tetris (Game Boy) Line Clear Sound Effects.mp3" id="11_mvwgk"]
 [ext_resource type="AudioStream" uid="uid://nojloug8td0q" path="res://assets/audio/sfx/viruses/8 Bit-Hit - Free Sound Effect [HD].mp3" id="11_r7xuu"]
+[ext_resource type="AudioStream" uid="uid://dpnw7bv2kydh7" path="res://assets/audio/sfx/viruses/pop.mp3" id="13_ic6ve"]
+[ext_resource type="AudioStream" uid="uid://c008lhfy1qlih" path="res://assets/audio/sfx/viruses/Mobile Phone Vibration Sound Effect _ Phone Ringing Vibrating Sound Effect 0.mp3" id="14_1rrch"]
+[ext_resource type="AudioStream" uid="uid://boke3xc1o26t2" path="res://assets/audio/sfx/viruses/Undertale Death Sound Effect.mp3" id="15_2tvmb"]
+[ext_resource type="AudioStream" uid="uid://bmnwlre65ig3p" path="res://assets/audio/sfx/viruses/Money Bag Sound Effect.mp3" id="16_55ofn"]
+[ext_resource type="AudioStream" uid="uid://pk4j6g8x6ry4" path="res://assets/audio/sfx/viruses/nullscape-baby-alerrt.mp3" id="16_mtyxf"]
 
 [node name="Audio" type="AudioStreamPlayer2D" unique_id=222432921]
 bus = &"SFX"
@@ -31,6 +36,7 @@ volume_db = -2.0
 [node name="Open" type="AudioStreamPlayer" parent="Player" unique_id=1612737415]
 stream = ExtResource("4_b4ede")
 volume_db = -1.0
+max_polyphony = 2
 
 [node name="Nyan Cat" type="Node" parent="." unique_id=1163307952]
 
@@ -74,3 +80,23 @@ stream = ExtResource("11_mvwgk")
 [node name="Curser" type="Node" parent="." unique_id=1640484333]
 
 [node name="Content" type="Node" parent="." unique_id=713461202]
+
+[node name="Pop" type="AudioStreamPlayer" parent="Content" unique_id=1545996161]
+stream = ExtResource("13_ic6ve")
+
+[node name="Active" type="AudioStreamPlayer" parent="Content" unique_id=1012769128]
+stream = ExtResource("14_1rrch")
+volume_db = -11.0
+
+[node name="Hit" type="AudioStreamPlayer" parent="Content" unique_id=834405743]
+stream = ExtResource("15_2tvmb")
+
+[node name="Bitecoin" type="Node" parent="." unique_id=402411852]
+
+[node name="Active" type="AudioStreamPlayer" parent="Bitecoin" unique_id=1123791163]
+stream = ExtResource("16_mtyxf")
+volume_db = -12.0
+
+[node name="Hit" type="AudioStreamPlayer" parent="Bitecoin" unique_id=2070028842]
+stream = ExtResource("16_55ofn")
+volume_db = -4.0

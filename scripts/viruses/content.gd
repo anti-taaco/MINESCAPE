@@ -19,5 +19,5 @@ func _process(delta: float) -> void:
 		print("Spawned")
 		var spawnable = load("res://scenes/viruses/parts/content_spawn.tscn").instantiate()
 		$Spawnables.add_child(spawnable)
-		Audio.bcod_lunge()
+		Audio.content_pop()
 		time = 0

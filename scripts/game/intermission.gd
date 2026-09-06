@@ -3,8 +3,19 @@ extends Node2D
 @onready var selection: Control = $Selection
 @onready var leet: AnimatedSprite2D = $CanvasLayer/Leet
 @onready var game_screen: TextureRect = $TextureRect
+@onready var reroll_tooltip: PanelContainer = $Reroll/Tooltip
+@onready var mod_inv: Control = $"Modifier Inventory"
+@onready var mod_bag: TextureButton = $"Modifiers Bag"
+
+@onready var left: CollisionShape2D = $"V Borders/left"
+@onready var right: CollisionShape2D = $"V Borders/right"
+@onready var bottom: CollisionShape2D = $"H Borders/bottom"
+@onready var top: CollisionShape2D = $"H Borders/top"
 
 var playlist = "Intermission"
+var instant_play = true
+var can_play = true
+
 var rect_size
 var virus_list
 var bug_list
@@ -12,9 +23,10 @@ var bug2_list
 var upgrade_list
 
 var rerolls : int = 1
+var reroll_cost : int = 200
 var random : int
 var choices : int = 3 - Modifiers.choice_removals
-var shop_choices : int = 2
+var shop_choices : int = 3
 var choice_list : Array[int]
 var breakout : bool = true
 var last_chosen : int = -1
@@ -23,9 +35,13 @@ var viruses : int = 0
 var bugs : int = 0
 var bugs_squared : int = 0
 var shop : bool = false
+var category_text : String = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#$Reroll/Tooltip.change_font_size(10)
+	reroll_tooltip.initialize(10, Vector2(60, 25))
+	
 	for i in range(3-choices):
 		selection.get_child(get_child_count()-1).queue_free()
 	game_screen.texture = Global.screenshot
@@ -36,9 +52,10 @@ func _ready() -> void:
 	if Global.level % 2 == 0:
 		print("bugs choose")
 		bugs += 1
-	if Global.level % 10 == 0:
-		print("bugs squared choose")
-		bugs_squared += 1
+	if Global.level % 8 == 0:
+		#print("bugs squared choose")
+		#bugs_squared += 1
+		pass
 	if Global.level % 5 == 3 or Global.level % 5 == 0:
 		print("shop choose")
 		shop = true
@@ -54,29 +71,41 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
+	$Label.text = "LEVEL " + str(Global.level)
+	$Reroll.text = "REROLL"
+	reroll_tooltip.text = "-" + str(reroll_cost) + " BITS"
+	$Category.text = category_text
+	if Global.bits < reroll_cost:
+		$Reroll.add_theme_color_override("font_color", Color(1, 0, 0))
+	else:
+		$Reroll.add_theme_color_override("font_color", Color.WHITE)
+	
+	if viruses > 0:
+		category_text = "VIRUSES"
+		selection_category(viruses, "virus choices", "virus_list")
+	elif bugs > 0:
+		category_text = "BUGS"
+		selection_category(bugs, "bug choices", "bug_list")
+	elif bugs_squared > 0:
+		category_text = "BUGS^2"
+		selection_category(bugs_squared, "bug2 choices", "bug2_list")
+	else:
+		if shop:
+			category_text = "UPGRADES"
+			inf_selection_category(shop, "upgrade choices", "upgrade_list")
+		else:
+			category_text = "CYA"
+			reroll_cost = 0
+			delete_selection()
+		$Continue.visible = true
+		
 	if game_screen.texture != Global.screenshot:
 		game_screen.texture = Global.screenshot
 	else:
 		var window = get_viewport().get_visible_rect().size
 		if not game_screen.position.y < -window.y and not game_screen.position.y > window.y:
 			game_screen.position += Vector2(0, -250) * delta
-	
-	$Label.text = "LEVEL " + str(Global.level)
-	$Label2.text = "BITS: " + str(Global.bits)
-	$Reroll.text = "REROLLS: " + str(rerolls)
-	
-	if viruses > 0:
-		selection_category(viruses, "virus choices", "virus_list")
-	elif bugs > 0:
-		selection_category(bugs, "bug choices", "bug_list")
-	elif bugs_squared > 0:
-		selection_category(bugs_squared, "bug2 choices", "bug2_list")
-	else:
-		if shop:
-			inf_selection_category(shop, "upgrade choices", "upgrade_list")
-		else:
-			delete_selection()
-		$Continue.visible = true
 
 func selection_category(category, folder, list):
 	for i in range(category):
@@ -137,15 +166,20 @@ func delete_selection():
 
 
 func _on_continue_button_up() -> void:
-	get_tree().change_scene_to_file("res://scenes/game.tscn")
+	get_tree().change_scene_to_file("res://scenes/game/game.tscn")
 
 
 func _on_reroll_button_up() -> void:
-	if rerolls > 0:
+	if rerolls > 0 and Global.bits > reroll_cost:
+		Global.bits -= reroll_cost
 		breakout = true
-		rerolls -= 1
+		#rerolls -= 1
 	leet.play("idle")
 
 
 func _on_reroll_button_down() -> void:
 	leet.play("reroll")
+
+
+func _on_modifiers_bag_button_up() -> void:
+	mod_inv.visible = !mod_inv.visible

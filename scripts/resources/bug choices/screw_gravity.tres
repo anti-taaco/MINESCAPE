@@ -1,7 +1,7 @@
 [gd_resource type="Resource" format=3 uid="uid://dese0j6w0lv0l"]
 
 [ext_resource type="Script" uid="uid://by4m4s56wry53" path="res://scripts/bugs/screw_gravity.gd" id="1_kikh8"]
-[ext_resource type="Texture2D" uid="uid://c3uw8e0yi0jgy" path="res://assets/images/board/tiles/tile.png" id="2_kikh8"]
+[ext_resource type="Texture2D" uid="uid://c5rqp2ul7d4ql" path="res://assets/images/viruses/tetromino_O.png" id="2_kikh8"]
 
 [resource]
 script = ExtResource("1_kikh8")

@@ -6,7 +6,7 @@ var camera : Node2D
 
 var fall_dist : int
 var time : float = 0
-var fall_time : float = 28 * Modifiers.tetromino_fall_multiplier
+var fall_time : float = 34 * Modifiers.tetromino_fall_multiplier
 var spawn : float = 0
 var spawn_time : float = fall_time * 8
 var y_dir : float = 1

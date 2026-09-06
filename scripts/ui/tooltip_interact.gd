@@ -1,12 +1,13 @@
-extends TextureRect
+extends Control
 
-@onready var tooltip: PanelContainer = $Tooltip
-
+@onready var tooltip : PanelContainer = $Tooltip
+var tool_text : RichTextLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	mouse_entered.connect(on_mouse_entered )
 	mouse_exited.connect(on_mouse_exited )
+	tool_text = tooltip.get_child(0)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

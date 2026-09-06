@@ -5,7 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://bsruwto7p3fov" path="res://assets/images/shop/leet/leet_idle.png" id="3_q3sny"]
 [ext_resource type="Texture2D" uid="uid://bwe8il7i8ncjb" path="res://assets/images/shop/leet/leet_reroll.png" id="4_70q1u"]
 [ext_resource type="PackedScene" uid="uid://dj1f35jtsqh4c" path="res://scenes/game/choice.tscn" id="5_4dpsl"]
+[ext_resource type="PackedScene" uid="uid://bjajwtx0qkddv" path="res://scenes/ui/bits.tscn" id="5_8yij8"]
 [ext_resource type="PackedScene" uid="uid://biyyxgkplyof" path="res://scenes/game/bg_music.tscn" id="6_xvilb"]
+[ext_resource type="Script" uid="uid://crxyc04jdamwl" path="res://scripts/ui/tooltip_interact.gd" id="7_8gfvk"]
+[ext_resource type="PackedScene" uid="uid://bududrfc7evub" path="res://scenes/ui/tooltip.tscn" id="7_ie42s"]
+[ext_resource type="Texture2D" uid="uid://dux0y2roq5hnq" path="res://assets/images/board/ui/modifiers_bag.png" id="10_fctyb"]
+[ext_resource type="PackedScene" uid="uid://b5mer461q0k5j" path="res://scenes/ui/modifier_inv.tscn" id="10_jqoy7"]
+[ext_resource type="Texture2D" uid="uid://4jybu1gbe2dv" path="res://assets/images/board/ui/modifiers_hover.png" id="11_kfyc6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6b8fk"]
 animations = [{
@@ -26,6 +32,17 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8gfvk"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8yij8"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fctyb"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kfyc6"]
+normal = Vector2(0, 1)
+
 [node name="Intermission" type="Node2D" unique_id=879600448]
 script = ExtResource("1_jg2gj")
 
@@ -43,6 +60,8 @@ layer = -1
 offset_right = 480.0
 offset_bottom = 270.0
 texture = ExtResource("2_0as5n")
+expand_mode = 1
+stretch_mode = 2
 
 [node name="Leet" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=152812051]
 position = Vector2(240, 135)
@@ -50,46 +69,61 @@ sprite_frames = SubResource("SpriteFrames_6b8fk")
 animation = &"idle"
 autoplay = "idle"
 
+[node name="Category" type="Label" parent="." unique_id=1767494502]
+offset_left = 264.0
+offset_top = 9.0
+offset_right = 402.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 24
+text = "CATEGORY"
+horizontal_alignment = 1
+
 [node name="Label" type="Label" parent="." unique_id=1302776457]
-offset_left = 19.0
+offset_left = 408.0
 offset_top = 204.0
-offset_right = 59.0
+offset_right = 454.0
 offset_bottom = 227.0
 text = "LEVEL"
 
-[node name="Label2" type="Label" parent="." unique_id=1571961194]
-offset_left = 22.0
-offset_top = 238.0
-offset_right = 62.0
-offset_bottom = 261.0
+[node name="Bits" parent="." unique_id=766844582 instance=ExtResource("5_8yij8")]
+offset_left = 399.0
+offset_top = 232.0
+offset_right = 435.0
+offset_bottom = 267.0
+
+[node name="Label2" type="Label" parent="Bits" unique_id=1571961194]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 6.0
+offset_right = 81.0
+offset_bottom = 29.0
 text = "BITS"
 
 [node name="Selection" type="Control" parent="." unique_id=2010845181]
 layout_mode = 3
 anchors_preset = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="Choice1" parent="Selection" unique_id=1963501307 instance=ExtResource("5_4dpsl")]
 layout_mode = 0
-offset_left = 239.0
+offset_left = 240.0
 offset_top = 143.0
-offset_right = 239.0
+offset_right = 240.0
 offset_bottom = 143.0
 
 [node name="Choice2" parent="Selection" unique_id=549711247 instance=ExtResource("5_4dpsl")]
 layout_mode = 0
 offset_left = 430.0
-offset_top = 141.0
+offset_top = 143.0
 offset_right = 430.0
-offset_bottom = 141.0
+offset_bottom = 143.0
 
 [node name="Choice3" parent="Selection" unique_id=453665479 instance=ExtResource("5_4dpsl")]
 layout_mode = 0
-offset_left = 336.0
-offset_top = 141.0
-offset_right = 336.0
-offset_bottom = 141.0
-
-[node name="BG Music" parent="." unique_id=265166352 instance=ExtResource("6_xvilb")]
+offset_left = 335.0
+offset_top = 143.0
+offset_right = 335.0
+offset_bottom = 143.0
 
 [node name="Continue" type="Button" parent="." unique_id=154973690]
 visible = false
@@ -97,15 +131,61 @@ offset_left = 303.0
 offset_top = 214.0
 offset_right = 382.0
 offset_bottom = 245.0
+mouse_default_cursor_shape = 2
 text = "Continue"
 
 [node name="Reroll" type="Button" parent="." unique_id=1191426515]
-offset_left = 34.0
+offset_left = 49.0
 offset_top = 42.0
-offset_right = 90.0
-offset_bottom = 73.0
-text = "Reroll"
+offset_right = 105.0
+offset_bottom = 71.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 12
+text = "REROLL"
+script = ExtResource("7_8gfvk")
+
+[node name="Tooltip" parent="Reroll" unique_id=627843056 instance=ExtResource("7_ie42s")]
+visible = false
+layout_mode = 0
+
+[node name="Borders" type="Node2D" parent="." unique_id=381336945]
+position = Vector2(241, 135)
+
+[node name="V Borders" type="StaticBody2D" parent="Borders" unique_id=163813774]
+
+[node name="left" type="CollisionShape2D" parent="Borders/V Borders" unique_id=1788199089]
+position = Vector2(-240, 0)
+shape = SubResource("WorldBoundaryShape2D_8gfvk")
+
+[node name="right" type="CollisionShape2D" parent="Borders/V Borders" unique_id=1893439091]
+position = Vector2(240, 0)
+shape = SubResource("WorldBoundaryShape2D_8yij8")
+
+[node name="H Borders" type="StaticBody2D" parent="Borders" unique_id=990475572]
+
+[node name="bottom" type="CollisionShape2D" parent="Borders/H Borders" unique_id=666970284]
+position = Vector2(0, 135)
+shape = SubResource("WorldBoundaryShape2D_fctyb")
+
+[node name="top" type="CollisionShape2D" parent="Borders/H Borders" unique_id=130723636]
+position = Vector2(0, -135)
+shape = SubResource("WorldBoundaryShape2D_kfyc6")
+
+[node name="BG Music" parent="." unique_id=265166352 instance=ExtResource("6_xvilb")]
+
+[node name="Modifier Inventory" parent="." unique_id=1185737646 instance=ExtResource("10_jqoy7")]
+visible = false
+
+[node name="Modifiers Bag" type="TextureButton" parent="." unique_id=1546615035]
+offset_left = 440.0
+offset_top = 4.0
+offset_right = 476.0
+offset_bottom = 40.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("10_fctyb")
+texture_hover = ExtResource("11_kfyc6")
 
 [connection signal="button_up" from="Continue" to="." method="_on_continue_button_up"]
 [connection signal="button_down" from="Reroll" to="." method="_on_reroll_button_down"]
 [connection signal="button_up" from="Reroll" to="." method="_on_reroll_button_up"]
+[connection signal="button_up" from="Modifiers Bag" to="." method="_on_modifiers_bag_button_up"]

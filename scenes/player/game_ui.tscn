@@ -2,7 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bchg2wyyebrhp" path="res://scripts/player/game_ui.gd" id="1_yubou"]
 [ext_resource type="Texture2D" uid="uid://cg3xnlem6l3rk" path="res://assets/images/board/ui/board_upbar.png" id="2_hmndv"]
-[ext_resource type="Texture2D" uid="uid://bffj0ea0qwd88" path="res://assets/images/board/ui/board_upbar_mid.png" id="3_p4jm6"]
+[ext_resource type="Texture2D" uid="uid://dc4jxsvw8ulsi" path="res://assets/images/board/ui/timer.png" id="3_gf7m8"]
+[ext_resource type="PackedScene" uid="uid://bjajwtx0qkddv" path="res://scenes/ui/bits.tscn" id="4_gf7m8"]
+[ext_resource type="Texture2D" uid="uid://djkb052jtsyim" path="res://assets/images/board/tiles/mine.png" id="4_hmndv"]
+[ext_resource type="FontFile" uid="uid://bemxpyac2yu62" path="res://assets/DS-DIGI.TTF" id="5_gf7m8"]
 
 [node name="GameUI" type="CanvasLayer" unique_id=789943783]
 layer = -1
@@ -10,19 +13,12 @@ script = ExtResource("1_yubou")
 
 [node name="Bar_Up" type="TextureRect" parent="." unique_id=1018970404]
 offset_right = 480.0
-offset_bottom = 270.0
+offset_bottom = 36.0
 pivot_offset = Vector2(241, 21)
 mouse_filter = 2
 texture = ExtResource("2_hmndv")
 
-[node name="Mid_Button" type="TextureRect" parent="." unique_id=1964704279]
-offset_right = 480.0
-offset_bottom = 270.0
-mouse_filter = 2
-texture = ExtResource("3_p4jm6")
-
 [node name="Control" type="Control" parent="." unique_id=1677852967]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -32,24 +28,54 @@ mouse_filter = 2
 [node name="ColorRectL" type="ColorRect" parent="Control" unique_id=1005848629]
 z_index = -1
 layout_mode = 0
-offset_right = 104.0
+offset_right = 64.0
 offset_bottom = 271.0
+mouse_filter = 2
 color = Color(0.5729883, 0.5729883, 0.5729883, 1)
 
 [node name="ColorRectR" type="ColorRect" parent="Control" unique_id=1187084006]
 z_index = -1
 layout_mode = 0
-offset_left = 376.0
+offset_left = 416.0
 offset_right = 480.0
 offset_bottom = 271.0
+mouse_filter = 2
 color = Color(0.57254905, 0.57254905, 0.57254905, 1)
 
-[node name="ColorRectU" type="ColorRect" parent="Control" unique_id=1929446809]
-z_index = -1
-layout_mode = 0
-offset_right = 480.0
-offset_bottom = 30.0
-color = Color(0.72156864, 0.72156864, 0.72156864, 1)
+[node name="RectT" type="ColorRect" parent="." unique_id=931788626]
+offset_left = 430.0
+offset_top = 6.0
+offset_right = 470.0
+offset_bottom = 26.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="IconT" type="TextureRect" parent="." unique_id=1694818059]
+visible = false
+offset_left = 376.0
+offset_top = -25.0
+offset_right = 440.0
+offset_bottom = 39.0
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(38, 50)
+mouse_filter = 2
+texture = ExtResource("3_gf7m8")
+
+[node name="RectM" type="ColorRect" parent="." unique_id=669506963]
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 50.0
+offset_bottom = 26.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="IconM" type="TextureRect" parent="." unique_id=629557897]
+offset_left = 55.0
+offset_top = 6.0
+offset_right = 75.0
+offset_bottom = 26.0
+mouse_filter = 2
+texture = ExtResource("4_hmndv")
 
 [node name="LabelLevel" type="Label" parent="." unique_id=1419531314]
 offset_left = 220.0
@@ -57,15 +83,12 @@ offset_top = 242.0
 offset_right = 260.0
 offset_bottom = 265.0
 text = "level"
-metadata/_edit_use_anchors_ = true
 
-[node name="LabelBits" type="Label" parent="." unique_id=359470480]
-offset_left = 11.0
-offset_top = 214.0
+[node name="Bits" parent="." unique_id=766844582 instance=ExtResource("4_gf7m8")]
+offset_left = 15.0
+offset_top = 202.0
 offset_right = 51.0
 offset_bottom = 237.0
-text = "bits"
-metadata/_edit_use_anchors_ = true
 
 [node name="LabelPos" type="Label" parent="." unique_id=183603944]
 offset_left = 404.0
@@ -73,21 +96,30 @@ offset_top = 244.0
 offset_right = 444.0
 offset_bottom = 267.0
 text = "pos"
-metadata/_edit_use_anchors_ = true
 
-[node name="LabelTime" type="Label" parent="." unique_id=80404336]
-offset_left = 409.0
-offset_top = 2.0
-offset_right = 452.0
-offset_bottom = 26.0
-text = "TIME:"
+[node name="LabelTime" type="Label" parent="." unique_id=260660641]
+offset_left = 431.0
+offset_top = 5.0
+offset_right = 469.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_gf7m8")
+theme_override_font_sizes/font_size = 22
+text = "000"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="LabelMines" type="Label" parent="." unique_id=612313365]
-offset_left = 8.0
-offset_top = 1.0
-offset_right = 63.0
-offset_bottom = 24.0
-text = "MINES:"
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 50.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_gf7m8")
+theme_override_font_sizes/font_size = 22
+text = "000"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="LabelLives" type="Label" parent="." unique_id=112341608]
 offset_left = 11.0

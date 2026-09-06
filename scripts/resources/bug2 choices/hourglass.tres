@@ -1,6 +1,6 @@
 [gd_resource type="Resource" format=3 uid="uid://dt5ujbce4scus"]
 
-[ext_resource type="Script" uid="uid://b68splhtl7xan" path="res://scripts/bugs2/hourglass.gd" id="1_xwu84"]
+[ext_resource type="Script" uid="uid://b68splhtl7xan" path="res://scripts/bugs/hourglass.gd" id="1_xwu84"]
 [ext_resource type="Texture2D" uid="uid://dm3ifv6kcwpbj" path="res://icon.svg" id="2_xwu84"]
 
 [resource]

@@ -37,9 +37,11 @@ func _ready() -> void:
 	print(camera.global_position)
 	game = get_tree().get_current_scene()
 	stats = player.p_class
+	update_ui()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	update_ui()
 	mouse_pos = get_global_mouse_position()
 	#print(mouse_pos)
 	$Area2D.global_position = mouse_pos
@@ -57,8 +59,6 @@ func _process(delta: float) -> void:
 	if Modifiers.flag_all_tiles and t_flag.count_no_flags() != 0:
 		game.game_over = false
 		game.game_won = false
-	
-	update_ui()
 	
 	var dir_x := Input.get_axis("left", "right")
 	var dir_y := -Input.get_axis("down", "up")

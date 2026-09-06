@@ -90,12 +90,6 @@ func take_screenshot():
 	print("take screenshot")
 	var img = get_viewport().get_texture().get_image()
 	screenshot = ImageTexture.create_from_image(img)
-	var file_path = "res://assets/screenshot/game_screen.png"
-	
-
-func delete_screenshots():
-	for file in DirAccess.get_files_at("res://assets/screenshot/"):  
-		DirAccess.remove_absolute(file)
 	
 func _notification(what):
 	if what == NOTIFICATION_WM_MOUSE_ENTER:
@@ -164,6 +158,14 @@ func store_resources(selection : Array[String]):
 	var list = []
 	for thing in selection:
 		if thing.ends_with(".tres"):
+			list.append(thing)
+	return list
+
+func store_scenes_as_resources(selection : Array[String]):
+	var list = []
+	for thing in selection:
+		if thing.ends_with(".tscn"):
+			thing = thing.replace(".tscn", ".tres")
 			list.append(thing)
 	return list
 

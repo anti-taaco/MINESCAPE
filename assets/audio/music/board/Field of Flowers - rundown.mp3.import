@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8175erau0cj7"
+path="res://.godot/imported/Field of Flowers - rundown.mp3-360e22c900f198eda248c4ebbfc86f42.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/board/Field of Flowers - rundown.mp3"
+dest_files=["res://.godot/imported/Field of Flowers - rundown.mp3-360e22c900f198eda248c4ebbfc86f42.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cp0av3xqya60x"]
+
+[ext_resource type="Script" uid="uid://bjumqeyx074ur" path="res://scripts/ui/modifier_item.gd" id="1_8rork"]
+[ext_resource type="Resource" uid="uid://bb5b47w7uk0xc" path="res://scripts/resources/upgrade choices/57_leaf_clover.tres" id="2_dqhl7"]
+[ext_resource type="Texture2D" uid="uid://dm3ifv6kcwpbj" path="res://icon.svg" id="3_cixkl"]
+[ext_resource type="Script" uid="uid://crxyc04jdamwl" path="res://scripts/ui/tooltip_interact.gd" id="4_cm6ep"]
+[ext_resource type="PackedScene" uid="uid://bududrfc7evub" path="res://scenes/ui/tooltip.tscn" id="5_qw1a3"]
+
+[node name="Modifier_Item" type="Control" unique_id=1157276656]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+script = ExtResource("1_8rork")
+stats = ExtResource("2_dqhl7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1050834855]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 13.0
+offset_right = 51.0
+offset_bottom = 51.0
+color = Color(1, 1, 1, 0.6)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1177805928]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 48.0
+offset_bottom = 48.0
+texture = ExtResource("3_cixkl")
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("4_cm6ep")
+
+[node name="Tooltip" parent="TextureRect" unique_id=627843056 instance=ExtResource("5_qw1a3")]
+visible = false
+layout_mode = 0
+
+[node name="Stack" type="Label" parent="." unique_id=649413076]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 40.0
+offset_right = 50.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 8
+text = "x1"
+horizontal_alignment = 2
+
+[connection signal="mouse_entered" from="TextureRect" to="TextureRect/Tooltip" method="toggle" binds= [true]]

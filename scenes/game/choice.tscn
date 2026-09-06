@@ -13,28 +13,30 @@ script = ExtResource("1_ycxmd")
 [node name="Name_Label" type="Label" parent="." unique_id=1895912181]
 layout_mode = 0
 offset_left = -35.0
-offset_top = -105.0
+offset_top = -102.0
 offset_right = 35.0
-offset_bottom = -82.0
+offset_bottom = -65.0
+theme_override_constants/line_spacing = -3
 theme_override_font_sizes/font_size = 12
 text = "name"
 horizontal_alignment = 1
 vertical_alignment = 2
+autowrap_mode = 3
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=425276214]
 layout_mode = 0
-offset_left = -40.0
-offset_top = -81.0
-offset_right = 40.0
-offset_bottom = -1.0
+offset_left = -37.0
+offset_top = -65.0
+offset_right = 37.0
+offset_bottom = 9.0
 color = Color(1, 1, 1, 0.5)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=762984332]
 layout_mode = 0
-offset_left = -35.0
-offset_top = -76.0
-offset_right = 35.0
-offset_bottom = -6.0
+offset_left = -32.0
+offset_top = -60.0
+offset_right = 32.0
+offset_bottom = 4.0
 texture = ExtResource("2_yhyp7")
 expand_mode = 1
 stretch_mode = 4
@@ -50,6 +52,7 @@ offset_left = -40.0
 offset_top = 14.0
 offset_right = 40.0
 offset_bottom = 43.0
+mouse_default_cursor_shape = 2
 theme_override_font_sizes/font_size = 14
 text = "test"
 clip_text = true

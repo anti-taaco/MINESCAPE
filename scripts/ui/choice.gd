@@ -25,7 +25,6 @@ func _process(delta: float) -> void:
 	if stats:
 		name_label.text = stats.name
 		texture.texture = stats.texture
-		#desc.text = stats.description
 		tooltip.text = stats.description
 		stats.change_stats()
 		count = stats.count_amount()
@@ -45,15 +44,19 @@ func _on_button_button_up() -> void:
 	if stats is VirusChoice and intermission.viruses > 0:
 		stats.add_virus()
 		intermission.viruses -= 1
-		print(Global.virus_list)
+		print("virused")
 	elif stats is BugChoice and intermission.bugs > 0:
 		stats.apply_bug()
-		Global.bug_list.append(stats.resource_path)
+		var bug_name = str(stats.resource_path.get_file().get_basename() ) + str(".tres")
+		Global.bug_list.append(bug_name)
+		#Global.bug_list.append(stats.resource_path)
 		intermission.bugs -= 1
 		print("bugged")
 	elif stats is Bug2Choice and intermission.bugs_squared > 0:
 		stats.apply_bug2()
-		Global.bug2_list.append(stats.resource_path)
+		var bug2_name = str(stats.resource_path.get_file().get_basename() ) + str(".tres")
+		Global.bug2_list.append(bug2_name)
+		#Global.bug2_list.append(stats.resource_path)
 		intermission.bugs_squared -= 1
 		print("bugged2")
 	if stats is UpgradeChoice and Global.bits >= stats.bit_cost:

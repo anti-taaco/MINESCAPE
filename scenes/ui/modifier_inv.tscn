@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://b5mer461q0k5j"]
+
+[ext_resource type="Script" uid="uid://df8043yaufrho" path="res://scripts/ui/modifier_inv.gd" id="1_e4y4p"]
+
+[node name="Modifier Inventory" type="Control" unique_id=1185737646]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e4y4p")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=784772991]
+layout_mode = 0
+offset_top = 130.0
+offset_right = 480.0
+offset_bottom = 270.0
+color = Color(0, 0, 0, 0.6)
+
+[node name="ColorBG" type="ColorRect" parent="." unique_id=1846503383]
+visible = false
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+color = Color(0, 0, 0, 0.3)
+
+[node name="Mod Items" type="GridContainer" parent="." unique_id=1457409781]
+layout_mode = 0
+offset_top = 130.0
+offset_right = 480.0
+offset_bottom = 270.0
+theme_override_constants/h_separation = 48
+theme_override_constants/v_separation = 48
+columns = 8
+
+[node name="Virus" type="BoxContainer" parent="Mod Items" unique_id=1497512661]
+layout_mode = 2
+theme_override_constants/separation = 48
+
+[node name="Bug" type="BoxContainer" parent="Mod Items" unique_id=561214336]
+layout_mode = 2
+theme_override_constants/separation = 48
+
+[node name="Upgrade" type="BoxContainer" parent="Mod Items" unique_id=492465787]
+layout_mode = 2
+theme_override_constants/separation = 48
+
+[node name="Bug2" type="BoxContainer" parent="Mod Items" unique_id=664181121]
+layout_mode = 2
+theme_override_constants/separation = 48

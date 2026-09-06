@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 	var collision = move_and_collide(direction * speed * delta)
 	if collision:
 		direction = direction.bounce(collision.get_normal())
-		rotate(get_angle_to(direction) )
+		rotation = direction.angle()
 		Audio.nyan_bounce()
 	leave_trail()
 	
@@ -36,4 +36,5 @@ func leave_trail():
 
 func _on_area_2d_mouse_entered() -> void:
 	print("Nyan Cat hit")
-	player.take_damage(1, false)
+	if player:
+		player.take_damage(1, false)

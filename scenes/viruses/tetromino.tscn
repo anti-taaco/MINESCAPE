@@ -1,29 +1,29 @@
 [gd_scene format=3 uid="uid://sxsg0q306ka7"]
 
 [ext_resource type="Script" uid="uid://cimhjkcuxi535" path="res://scripts/viruses/tetromino.gd" id="1_lbtje"]
-[ext_resource type="Texture2D" uid="uid://c3uw8e0yi0jgy" path="res://assets/images/board/tiles/tile.png" id="2_pam13"]
+[ext_resource type="Texture2D" uid="uid://c5rqp2ul7d4ql" path="res://assets/images/viruses/tetromino_O.png" id="2_pam13"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pam13"]
-size = Vector2(18.666668, 18.666668)
 
 [node name="Tetromino" type="CharacterBody2D" unique_id=1948499445]
 script = ExtResource("1_lbtje")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=304945282]
-offset_left = -28.0
-offset_top = -28.0
-offset_right = 28.0
-offset_bottom = 32.0
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 47.0
 mouse_filter = 2
 color = Color(1, 0, 0, 0.24705882)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1864370242]
-scale = Vector2(3.5, 3.5)
+position = Vector2(1.3113022e-06, 0)
 texture = ExtResource("2_pam13")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=110017945]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=367935030]
+position = Vector2(0, 9.536743e-07)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_pam13")
 

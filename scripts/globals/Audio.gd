@@ -5,6 +5,9 @@ extends AudioStreamPlayer2D
 @onready var sleep : Node = $SleepMode
 @onready var bcod: Node = $BCOD
 @onready var tetromino: Node = $Tetromino
+@onready var curser: Node = $Curser
+@onready var content: Node = $Content
+@onready var bitecoin: Node = $Bitecoin
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -77,3 +80,30 @@ func tetromino_fall():
 
 func tetromino_hit():
 	tetromino.get_node("Hit").play()
+	
+
+# CONTENT
+func content_pop():
+	var rand = randf_range(0.8, 1.3)
+	content.get_node("Pop").set_pitch_scale(rand)
+	content.get_node("Pop").play()
+
+func content_active():
+	if not content.get_node("Active").playing:
+		content.get_node("Active").play()
+func content_active_stop():
+	content.get_node("Active").stop()
+
+func content_hit():
+	content.get_node("Hit").play()
+	
+
+# BITECOIN
+func bitecoin_active():
+	bitecoin.get_node("Active").play()
+
+func bitecoin_lunge():
+	pass
+
+func bitecoin_hit():
+	bitecoin.get_node("Hit").play()

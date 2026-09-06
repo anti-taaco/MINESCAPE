@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bjajwtx0qkddv"]
+
+[ext_resource type="Texture2D" uid="uid://b4h7rivicw0vb" path="res://assets/images/board/ui/bits.png" id="1_hmdtj"]
+[ext_resource type="Script" uid="uid://mv0uxji2wf4s" path="res://scripts/ui/bits.gd" id="1_wqbp0"]
+[ext_resource type="FontFile" uid="uid://bemxpyac2yu62" path="res://assets/DS-DIGI.TTF" id="2_wqbp0"]
+
+[node name="Bits" type="Control" unique_id=766844582]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 36.0
+offset_bottom = 35.0
+script = ExtResource("1_wqbp0")
+
+[node name="IconBits" type="TextureRect" parent="." unique_id=2127708880]
+layout_mode = 0
+offset_right = 36.0
+offset_bottom = 36.0
+texture = ExtResource("1_hmdtj")
+expand_mode = 1
+
+[node name="LabelBits" type="Label" parent="." unique_id=1121593879]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 27.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wqbp0")
+theme_override_font_sizes/font_size = 10
+text = "BITS"
