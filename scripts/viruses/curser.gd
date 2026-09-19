@@ -54,4 +54,4 @@ func leave_trail():
 func _on_area_2d_mouse_entered() -> void:
 	if active:
 		print("Curser hit")
-		player.take_damage(1, false)
+		player.take_damage(1, $Sprite2D.texture)

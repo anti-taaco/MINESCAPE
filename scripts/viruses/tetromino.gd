@@ -48,7 +48,7 @@ func _physics_process(delta: float) -> void:
 			can_boomerang = true
 	
 	if player_inside:
-		player.take_damage(1, false)
+		player.take_damage(1, $Sprite2D.texture)
 
 func spawn_in():
 	var view_size = get_viewport_rect().size/4

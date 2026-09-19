@@ -8,20 +8,17 @@ var game : Node2D
 @onready var label: Label = $"../GameUI/Label"
 @onready var game_ui: CanvasLayer = $"../GameUI"
 
-#@onready var t_grid: TileMapLayer = $"../../Board/TileMapLayer"
-#@onready var t_num: TileMapLayer = $"../../Board/TileMapNumbers"
-#@onready var t_flag: TileMapLayer = $"../../Board/TileMapFlag"
-#@onready var t_open: TileMapLayer = $"../../Board/TileMapOpened"
-
 @onready var t_grid: TileMapLayer = $"../../CanvasLayer/Board/TileMapLayer"
 @onready var t_num: TileMapLayer = $"../../CanvasLayer/Board/TileMapNumbers"
 @onready var t_flag: TileMapLayer = $"../../CanvasLayer/Board/TileMapFlag"
 @onready var t_open: TileMapLayer = $"../../CanvasLayer/Board/TileMapOpened"
+var mine_img = preload("res://assets/images/board/tiles/mine.png")
 
 var speed : float = 3
 var ability_uses : int = 1 + Modifiers.extra_ability_uses
 
 var can_click : bool = true
+var grid_blocked : bool = false
 var opened : int = 0
 var safe_clicks : int = 0
 var ab_clicks : int = 0
@@ -29,8 +26,8 @@ var ab_clicks : int = 0
 var mouse_pos : Vector2
 var tile_mouse_pos : Vector2
 
-var time : float = 0
-var explode_time : float = 600
+var e_time : float = 0
+var explode_limit : float = 600
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -45,10 +42,12 @@ func _process(delta: float) -> void:
 	mouse_pos = get_global_mouse_position()
 	#print(mouse_pos)
 	$Area2D.global_position = mouse_pos
-	if $Area2D.has_overlapping_areas():
+	
+	if $Area2D.has_overlapping_areas() and grid_blocked:
 		can_click = false
 	else:
 		can_click = true
+	
 	tile_mouse_pos = t_grid.local_to_map(mouse_pos)
 	var atlas_coords = t_grid.get_cell_atlas_coords(tile_mouse_pos)
 	
@@ -74,7 +73,7 @@ func _process(delta: float) -> void:
 		fast_tile_opening(delta)
 	
 	if Input.is_action_just_pressed("M1") and can_open(tile_mouse_pos) and can_click:
-		time = 0
+		e_time = 0
 		ab_clicks += 1
 		if opened == 0:
 			t_num.set_mines(tile_mouse_pos)
@@ -83,7 +82,7 @@ func _process(delta: float) -> void:
 		t_flag.clear_flags()
 		if t_num.get_cell_source_id(tile_mouse_pos) == 9:
 			if defuse_chance():
-				player.take_damage(1+Modifiers.mine_add_damage, true)
+				player.take_damage(1+Modifiers.mine_add_damage, mine_img, true)
 				Audio.player_mine()
 		else:
 			safe_clicks += 1
@@ -159,7 +158,6 @@ func count_mines():
 
 func defuse_chance():
 	var range = Global.favorable_rng(0, 100, Modifiers.luck_factor, 1, 1)
-	print(range <= Modifiers.defuse_chance)
 	if range >= Modifiers.defuse_chance:
 		return true
 	else:
@@ -191,13 +189,13 @@ func reveal_area(pos, tile):
 				t_grid.reveal_space(pos + offset)
 
 func fast_tile_opening(delta : float):
-	if time <= explode_time * delta:
-		time += delta
+	if e_time <= explode_limit * delta:
+		e_time += delta
 	else:
-		time = 0
+		e_time = 0
 		Audio.player_mine()
-		player.take_damage(1, false)
-	if time >= explode_time * delta - 3:
+		player.take_damage(1, mine_img)
+	if e_time >= explode_limit * delta - 3:
 		Audio.sleep_wake()
 	
 func debug_mode():
@@ -210,3 +208,15 @@ func update_ui():
 	game_ui.time = game.time_elapsed
 	game_ui.game_won = game.game_won
 	game_ui.ability_uses = ability_uses
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("blocks_grid"):
+		can_click = false
+		grid_blocked = true
+
+
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	if area.is_in_group("blocks_grid"):
+		can_click = true
+		grid_blocked = false

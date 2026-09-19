@@ -33,8 +33,12 @@ var bug2_list : Array[String]
 # UPGRADES
 var upgrade_list : Array[String]
 
+var screenshot: ImageTexture
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	reset()
+	
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	current_mode = get_window().mode
 	t_grid = get_tree().get_first_node_in_group("TileMapLayer")
@@ -85,7 +89,6 @@ func full_screen(current_mode):
 	else:
 		get_window().mode = get_window().MODE_FULLSCREEN
 		
-var screenshot: ImageTexture
 func take_screenshot():
 	print("take screenshot")
 	var img = get_viewport().get_texture().get_image()
@@ -199,3 +202,23 @@ func find_node_in_parent(node, name : String):
 	for child in node.get_children():
 		if child.name == name:
 			return child
+
+func reset():
+	bits = 0 
+	level = 1
+	game_over = false
+	mouse_outside = false
+	
+	width = 5
+	height = 5
+	border = 2
+	mines = 3
+	
+	virus_added = false
+	virus_list = []
+	temp_viruses = []
+	bug_list = []
+	bug2_list = []
+	upgrade_list = []
+	
+	screenshot = null

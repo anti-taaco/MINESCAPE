@@ -12,9 +12,10 @@ config_version=5
 
 config/name="MINESCAPE"
 run/main_scene="uid://dspojhotds26n"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 run/max_fps=60
-config/icon="res://icon.svg"
+config/icon="uid://cx7y2vaxyi20d"
+config/windows_native_icon="res://assets/images/shop/leet/favicon.ico"
 config/defaults/default_clear_color=Color(0, 0.5019608, 0.5019608, 1)
 
 [audio]
@@ -27,6 +28,7 @@ Global="*uid://65kp6n3lbdue"
 Modifiers="*uid://qtxpp1gpqmp1"
 Audio="*uid://ctv3g4n7pa6ja"
 Selection="*uid://ds2awo5ku4jtj"
+Tracker="*uid://jwp7g73s1757"
 
 [display]
 
@@ -35,6 +37,14 @@ window/size/viewport_height=270
 window/size/mode=2
 window/subwindows/embed_subwindows=false
 window/stretch/mode="canvas_items"
+
+[global_group]
+
+blocks_grid=""
+
+[gui]
+
+theme/default_font_antialiasing=0
 
 [input]
 
@@ -101,6 +111,11 @@ refresh={
 Debug={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":true,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":72,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+"check modifiers"={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":84,"key_label":0,"unicode":116,"location":0,"echo":false,"script":null)
 ]
 }
 

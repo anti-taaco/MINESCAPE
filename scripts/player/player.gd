@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var p_class : Resource
+@onready var game_ui: CanvasLayer = $GameUI
 
 var max_lives : int = 3 + Modifiers.extra_lives
 var lives : int
@@ -30,14 +31,21 @@ func _physics_process(delta: float) -> void:
 	if lives > max_lives:
 		lives = max_lives
 		
-func take_damage(dmg : int, bypass : bool):
+func take_damage(dmg : int, texture : Texture2D = null, bypass : bool = false):
 	if bypass or not invincible:
+		invincible = true
 		lives -= dmg
 		i_frames = 0
-		invincible = true
+		if texture:
+			game_ui.get_node("IconV").texture = texture
+		
 		for i in range(dmg):
 			Global.bits -= Modifiers.bits_lost_on_hit
-		$Cursor.time = 0
+		$Cursor.e_time = 0
 		Audio.player_hit()
 	else:
 		print("invincible")
+
+
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	pass # Replace with function body.

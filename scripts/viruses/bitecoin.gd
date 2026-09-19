@@ -98,6 +98,7 @@ func _on_area_2d_mouse_entered() -> void:
 	Audio.bitecoin_hit()
 	if Global.bits >= bits_taken and not player.invincible:
 		Global.bits -= bits_taken
+		player.take_damage(3, sprite.sprite_frames.get_frame_texture("idle", 0), true )
 	else: if Global.bits < bits_taken:
 		Global.bits = 0
-		player.take_damage(3, false)
+		player.take_damage(3, sprite.sprite_frames.get_frame_texture("idle", 0) )

@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void:
 		timer = 0
 	
 	if player_inside:
-		player.take_damage(1, false)
+		player.take_damage(1, $Sprite2D.texture)
 
 func randomize_stats():
 	speed = Global.favorable_rng(5, 20, Modifiers.luck_factor, 1, 2) * Modifiers.nextbot_speed_multiplier

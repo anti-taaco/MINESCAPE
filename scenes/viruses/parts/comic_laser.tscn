@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://wyij0ov7l0w"]
+
+[ext_resource type="Script" uid="uid://cxgewria05rv4" path="res://scripts/viruses/comic_laser.gd" id="1_q388r"]
+[ext_resource type="AudioStream" uid="uid://048l8ydfbe8v" path="res://assets/audio/sfx/viruses/bfb blsat.wav" id="2_08q1p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2o34p"]
+
+[node name="Comic_Laser" type="Line2D" unique_id=700625456]
+top_level = true
+points = PackedVector2Array(-800, 0, 800, 0)
+default_color = Color(0.7490196, 1, 1, 1)
+script = ExtResource("1_q388r")
+
+[node name="Blast" type="AudioStreamPlayer" parent="." unique_id=1667003905]
+stream = ExtResource("2_08q1p")
+volume_db = -7.0
+
+[node name="Area2D" type="Area2D" parent="." unique_id=40640688]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2044490752]
+shape = SubResource("RectangleShape2D_2o34p")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

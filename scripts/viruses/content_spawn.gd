@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 		time += delta
 	else:
 		print("Content hit")
-		player.take_damage(1, true)
+		player.take_damage(1, $Sprite2D.texture, true)
 		Audio.content_active_stop()
 		Audio.content_hit()
 		queue_free()
@@ -47,16 +47,19 @@ func _physics_process(delta: float) -> void:
 		cursor.can_click = false
 	
 	if clicks >= clicks_required:
-		_on_area_2d_mouse_exited()
 		Audio.content_active_stop()
 		queue_free()
+		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
+		#_on_area_2d_mouse_exited()
 
 
 func _on_area_2d_mouse_entered() -> void:
 	cursor_inside = true
+	cursor.can_click = false
 	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 	
 
 func _on_area_2d_mouse_exited() -> void:
 	cursor_inside = false
+	cursor.can_click = true
 	Input.set_default_cursor_shape(Input.CURSOR_ARROW)

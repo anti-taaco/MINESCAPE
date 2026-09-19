@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cr28m0js5r1ux"]
 
 [ext_resource type="Script" uid="uid://bxmyi7baj8p0o" path="res://scripts/game/game.gd" id="1_lfrn8"]
-[ext_resource type="PackedScene" uid="uid://w5qpuypg4j3w" path="res://scenes/ui/board.tscn" id="2_5i0tg"]
+[ext_resource type="PackedScene" uid="uid://w5qpuypg4j3w" path="res://scenes/game/board.tscn" id="2_5i0tg"]
 [ext_resource type="PackedScene" uid="uid://bdo0fac06u5uc" path="res://scenes/player/player.tscn" id="3_bdhmt"]
 [ext_resource type="PackedScene" uid="uid://biyyxgkplyof" path="res://scenes/game/bg_music.tscn" id="4_87uf6"]
 [ext_resource type="PackedScene" uid="uid://dkaof6bm34neh" path="res://scenes/ui/pause_menu.tscn" id="5_2a8rs"]
@@ -38,3 +38,5 @@ offset_right = -240.0
 offset_bottom = -135.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[editable path="CanvasLayer/Board"]

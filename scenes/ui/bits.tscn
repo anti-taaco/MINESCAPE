@@ -5,10 +5,12 @@
 [ext_resource type="FontFile" uid="uid://bemxpyac2yu62" path="res://assets/DS-DIGI.TTF" id="2_wqbp0"]
 
 [node name="Bits" type="Control" unique_id=766844582]
+z_index = -1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 36.0
 offset_bottom = 35.0
+mouse_filter = 2
 script = ExtResource("1_wqbp0")
 
 [node name="IconBits" type="TextureRect" parent="." unique_id=2127708880]

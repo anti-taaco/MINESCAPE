@@ -8,6 +8,7 @@ extends AudioStreamPlayer2D
 @onready var curser: Node = $Curser
 @onready var content: Node = $Content
 @onready var bitecoin: Node = $Bitecoin
+@onready var ice: Node = $Ice
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -107,3 +108,21 @@ func bitecoin_lunge():
 
 func bitecoin_hit():
 	bitecoin.get_node("Hit").play()
+	
+
+# ICE
+func ice_active():
+	ice.get_node("Active").play()
+	
+func ice_disappear():
+	ice.get_node("Disappear").play()
+	
+# RECYCLE BIN
+
+# BLAST
+func comic_blast():
+	if not $Comic.get_node("Blast").playing:
+		$Comic.get_node("Blast").play()
+
+func comic_blast_stop():
+	$Comic.get_node("Blast").stop()

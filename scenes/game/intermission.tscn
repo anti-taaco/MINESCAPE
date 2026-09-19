@@ -19,7 +19,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_q3sny")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 5.0
 }, {
@@ -27,7 +27,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_70q1u")
 }],
-"loop": true,
+"loop": 1,
 "name": &"reroll",
 "speed": 5.0
 }]
@@ -104,25 +104,25 @@ layout_mode = 3
 anchors_preset = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Choice1" parent="Selection" unique_id=1963501307 instance=ExtResource("5_4dpsl")]
-layout_mode = 0
-offset_left = 240.0
-offset_top = 143.0
-offset_right = 240.0
-offset_bottom = 143.0
-
-[node name="Choice2" parent="Selection" unique_id=549711247 instance=ExtResource("5_4dpsl")]
+[node name="Choice1" parent="Selection" unique_id=549711247 instance=ExtResource("5_4dpsl")]
 layout_mode = 0
 offset_left = 430.0
 offset_top = 143.0
 offset_right = 430.0
 offset_bottom = 143.0
 
-[node name="Choice3" parent="Selection" unique_id=453665479 instance=ExtResource("5_4dpsl")]
+[node name="Choice2" parent="Selection" unique_id=453665479 instance=ExtResource("5_4dpsl")]
 layout_mode = 0
 offset_left = 335.0
 offset_top = 143.0
 offset_right = 335.0
+offset_bottom = 143.0
+
+[node name="Choice3" parent="Selection" unique_id=1963501307 instance=ExtResource("5_4dpsl")]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 143.0
+offset_right = 240.0
 offset_bottom = 143.0
 
 [node name="Continue" type="Button" parent="." unique_id=154973690]
@@ -176,16 +176,34 @@ shape = SubResource("WorldBoundaryShape2D_kfyc6")
 [node name="Modifier Inventory" parent="." unique_id=1185737646 instance=ExtResource("10_jqoy7")]
 visible = false
 
-[node name="Modifiers Bag" type="TextureButton" parent="." unique_id=1546615035]
+[node name="Check Modifiers" type="Control" parent="." unique_id=291125712]
+layout_mode = 3
+anchors_preset = 0
 offset_left = 440.0
 offset_top = 4.0
-offset_right = 476.0
-offset_bottom = 40.0
+offset_right = 480.0
+offset_bottom = 44.0
+
+[node name="Modifiers Bag" type="TextureButton" parent="Check Modifiers" unique_id=1546615035]
+layout_mode = 0
+offset_right = 36.0
+offset_bottom = 36.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("10_fctyb")
 texture_hover = ExtResource("11_kfyc6")
 
+[node name="Modifiers Label" type="Label" parent="Check Modifiers" unique_id=1986056506]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 17.0
+offset_right = 31.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "T"
+horizontal_alignment = 1
+
 [connection signal="button_up" from="Continue" to="." method="_on_continue_button_up"]
 [connection signal="button_down" from="Reroll" to="." method="_on_reroll_button_down"]
 [connection signal="button_up" from="Reroll" to="." method="_on_reroll_button_up"]
-[connection signal="button_up" from="Modifiers Bag" to="." method="_on_modifiers_bag_button_up"]
+[connection signal="button_up" from="Check Modifiers/Modifiers Bag" to="." method="_on_modifiers_bag_button_up"]

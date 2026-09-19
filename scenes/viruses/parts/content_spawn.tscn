@@ -11,7 +11,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_1bxlo")
 }],
-"loop": true,
+"loop": 1,
 "name": &"breaking",
 "speed": 5.0
 }, {
@@ -19,7 +19,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("1_4l35q")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }, {
@@ -27,7 +27,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_ovjlf")
 }],
-"loop": true,
+"loop": 1,
 "name": &"partially breaking",
 "speed": 5.0
 }]
@@ -35,7 +35,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_88smb"]
 size = Vector2(16, 15)
 
-[node name="ContentSpawn" type="CharacterBody2D" unique_id=2047931757]
+[node name="ContentSpawn" type="CharacterBody2D" unique_id=2047931757 groups=["blocks_grid"]]
 script = ExtResource("1_88smb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1862020640]

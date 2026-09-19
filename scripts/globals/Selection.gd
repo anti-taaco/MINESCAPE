@@ -7,13 +7,6 @@ var bug_list
 var bug2_list
 var upgrade_list
 
-var random : int
-var choices : int = 3 - Modifiers.choice_removals
-var shop_choices : int = 2
-var choice_list : Array[int]
-var breakout : bool = true
-var last_chosen : int = -1
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	virus_list = DirAccess.get_files_at("res://scripts/resources/virus choices/")

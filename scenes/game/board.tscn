@@ -19,87 +19,87 @@
 [ext_resource type="Script" uid="uid://bu7pluidnabkc" path="res://scripts/game/tile_num.gd" id="15_y0uh0"]
 [ext_resource type="Script" uid="uid://fb1g15x5ydyf" path="res://scripts/game/tile_opened.gd" id="16_716ee"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pln8w"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a7afc"]
 texture = ExtResource("1_1huyh")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_r1ypk"]
-sources/0 = SubResource("TileSetAtlasSource_pln8w")
+sources/0 = SubResource("TileSetAtlasSource_a7afc")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l1w03"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ul77s"]
 texture = ExtResource("3_m4vny")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f7vmr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y5pjw"]
 texture = ExtResource("4_4bs3u")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_rfpb2"]
-sources/0 = SubResource("TileSetAtlasSource_l1w03")
-sources/1 = SubResource("TileSetAtlasSource_f7vmr")
+sources/0 = SubResource("TileSetAtlasSource_ul77s")
+sources/1 = SubResource("TileSetAtlasSource_y5pjw")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ego30"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b2wxj"]
 texture = ExtResource("4_4bs3u")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1lljp"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e2y0k"]
 texture = ExtResource("6_i85x2")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4bs3u"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2oagx"]
 texture = ExtResource("8_m4vny")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4cgr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8vxj0"]
 texture = ExtResource("7_b7otg")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5wv4l"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uqakq"]
 texture = ExtResource("8_os6cd")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8qctr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2xipk"]
 texture = ExtResource("9_v21d4")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0dbm"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qijmh"]
 texture = ExtResource("10_5pkjh")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vn0nv"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lmhje"]
 texture = ExtResource("11_0qo51")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d16s1"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j3fhp"]
 texture = ExtResource("12_c845x")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3xv3g"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vb331"]
 texture = ExtResource("13_sngwm")
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sola7"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sqevb"]
 texture = ExtResource("14_5g1vp")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_hsymp"]
-sources/0 = SubResource("TileSetAtlasSource_ego30")
-sources/1 = SubResource("TileSetAtlasSource_1lljp")
-sources/9 = SubResource("TileSetAtlasSource_sola7")
-sources/2 = SubResource("TileSetAtlasSource_b4cgr")
-sources/3 = SubResource("TileSetAtlasSource_5wv4l")
-sources/4 = SubResource("TileSetAtlasSource_8qctr")
-sources/5 = SubResource("TileSetAtlasSource_w0dbm")
-sources/6 = SubResource("TileSetAtlasSource_vn0nv")
-sources/7 = SubResource("TileSetAtlasSource_d16s1")
-sources/8 = SubResource("TileSetAtlasSource_3xv3g")
-sources/10 = SubResource("TileSetAtlasSource_4bs3u")
+sources/0 = SubResource("TileSetAtlasSource_b2wxj")
+sources/1 = SubResource("TileSetAtlasSource_e2y0k")
+sources/9 = SubResource("TileSetAtlasSource_sqevb")
+sources/2 = SubResource("TileSetAtlasSource_8vxj0")
+sources/3 = SubResource("TileSetAtlasSource_uqakq")
+sources/4 = SubResource("TileSetAtlasSource_2xipk")
+sources/5 = SubResource("TileSetAtlasSource_qijmh")
+sources/6 = SubResource("TileSetAtlasSource_lmhje")
+sources/7 = SubResource("TileSetAtlasSource_j3fhp")
+sources/8 = SubResource("TileSetAtlasSource_vb331")
+sources/10 = SubResource("TileSetAtlasSource_2oagx")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a47pe"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_apjht"]
 texture = ExtResource("4_4bs3u")
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_eup36"]
-sources/0 = SubResource("TileSetAtlasSource_a47pe")
+sources/0 = SubResource("TileSetAtlasSource_apjht")
 
 [node name="Board" type="Node2D" unique_id=388124613]
 script = ExtResource("1_vevib")

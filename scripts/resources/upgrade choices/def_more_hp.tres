@@ -8,5 +8,5 @@ script = ExtResource("1_8lne5")
 texture = ExtResource("2_8lne5")
 name = "1-Up"
 description = "+1 max. life"
-bit_cost = 320
+bit_cost = 300
 metadata/_custom_type_script = "uid://dtcf5w6l6py6a"

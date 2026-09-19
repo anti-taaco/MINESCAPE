@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="VirusChoice" format=3 uid="uid://djfloap0ttn8k"]
+
+[ext_resource type="Script" uid="uid://cqac0q3lkmb7l" path="res://scripts/resources/virus choices/virus_choice.gd" id="1_4qhvq"]
+[ext_resource type="Texture2D" uid="uid://qo17de23sq1u" path="res://assets/images/viruses/recycle bin.png" id="2_xwb0x"]
+
+[resource]
+script = ExtResource("1_4qhvq")
+texture = ExtResource("2_xwb0x")
+name = "Recycle Bin"
+description = "Reach a specified amount of flags"
+bit_gain = 800
+level = 5
+metadata/_custom_type_script = "uid://cqac0q3lkmb7l"

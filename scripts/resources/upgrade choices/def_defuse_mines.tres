@@ -8,6 +8,6 @@ script = ExtResource("1_ap1j2")
 texture = ExtResource("2_ap1j2")
 name = "Defuse Kit"
 description = "+10% chance to not take damage from opening a mine"
-bit_cost = 300
+bit_cost = 250
 stack = 3
 metadata/_custom_type_script = "uid://dtcf5w6l6py6a"

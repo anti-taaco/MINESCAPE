@@ -40,20 +40,15 @@ func _ready() -> void:
 	create_grid()
 	
 	grid_size = get_used_rect().size
-	print("hh" + str(grid_size))
 	grid_pos = get_used_rect().position #+ Vector2i(100, 100)
-	print("hhihi" + str(grid_pos))
 	top_left = Vector2i(grid_pos.x, grid_pos.y)
 	bottom_right = Vector2i(top_left.x + w-1, top_left.y + h-1)
-	print("top left" + str(top_left) )
-	print(bottom_right) #grid_size(5,7) center = (8, 24)
 	Global.board_pos.x = (1 + bottom_right.x + top_left.x ) / 2.0
 	Global.board_pos.y = (1 + bottom_right.y + top_left.y) / 2.0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	for i in get_used_cells_by_id(1):
-		pass
+	pass
 	
 func create_grid():
 	var atlas_coords = Vector2i(0,0)

@@ -8,5 +8,5 @@ script = ExtResource("1_rhmex")
 texture = ExtResource("2_rhmex")
 name = "Free Wi-Fi"
 description = "+25% Bit multiplier"
-bit_cost = 400
+bit_cost = 350
 metadata/_custom_type_script = "uid://dtcf5w6l6py6a"

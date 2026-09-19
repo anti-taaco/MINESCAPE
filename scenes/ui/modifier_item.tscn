@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cp0av3xqya60x"]
 
 [ext_resource type="Script" uid="uid://bjumqeyx074ur" path="res://scripts/ui/modifier_item.gd" id="1_8rork"]
-[ext_resource type="Resource" uid="uid://bb5b47w7uk0xc" path="res://scripts/resources/upgrade choices/57_leaf_clover.tres" id="2_dqhl7"]
+[ext_resource type="Resource" uid="uid://bb5b47w7uk0xc" path="res://scripts/resources/upgrade choices/def_luckier.tres" id="2_dqhl7"]
 [ext_resource type="Texture2D" uid="uid://dm3ifv6kcwpbj" path="res://icon.svg" id="3_cixkl"]
 [ext_resource type="Script" uid="uid://crxyc04jdamwl" path="res://scripts/ui/tooltip_interact.gd" id="4_cm6ep"]
 [ext_resource type="PackedScene" uid="uid://bududrfc7evub" path="res://scenes/ui/tooltip.tscn" id="5_qw1a3"]

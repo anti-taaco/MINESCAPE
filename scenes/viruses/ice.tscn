@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b5o6xea41d4qj"]
+
+[ext_resource type="Script" uid="uid://bjuqjtass1le" path="res://scripts/viruses/ice.gd" id="1_d2wb3"]
+[ext_resource type="Texture2D" uid="uid://casm6glmyikdl" path="res://assets/images/viruses/ice.png" id="2_n3anu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2o34p"]
+size = Vector2(96, 96)
+
+[node name="Ice" type="CharacterBody2D" unique_id=44045644]
+script = ExtResource("1_d2wb3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=940629110]
+self_modulate = Color(1, 1, 1, 0.35000002)
+texture = ExtResource("2_n3anu")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1007051042]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=25863400]
+shape = SubResource("RectangleShape2D_2o34p")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

@@ -49,7 +49,7 @@ func _physics_process(delta: float) -> void:
 		
 		if game_time > game_duration * delta:
 			reset_times()
-			player.take_damage(1, true)
+			player.take_damage(1, null, true)
 		else:
 			game_time += delta
 		$Label.text = str(int(game_duration*delta-game_time)) + "s"

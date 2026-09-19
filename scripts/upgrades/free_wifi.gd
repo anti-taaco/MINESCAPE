@@ -10,7 +10,7 @@ func change_stats():
 		set_init = false
 	multi = 1
 	for i in range(count_amount() ):
-		multi += 0.3
+		multi += 0.35
 	bit_cost = int(initial_cost * multi)
 
 func apply_upgrade():

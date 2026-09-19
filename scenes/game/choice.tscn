@@ -5,6 +5,14 @@
 [ext_resource type="Script" uid="uid://crxyc04jdamwl" path="res://scripts/ui/tooltip_interact.gd" id="3_jt4bu"]
 [ext_resource type="PackedScene" uid="uid://bududrfc7evub" path="res://scenes/ui/tooltip.tscn" id="4_827pk"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2o34p"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.47397572, 0.47397572, 0.47397572, 1)
+
 [node name="Choice" type="Control" unique_id=1963501307]
 layout_mode = 3
 anchors_preset = 0
@@ -17,7 +25,7 @@ offset_top = -102.0
 offset_right = 35.0
 offset_bottom = -65.0
 theme_override_constants/line_spacing = -3
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 11
 text = "name"
 horizontal_alignment = 1
 vertical_alignment = 2
@@ -30,6 +38,14 @@ offset_top = -65.0
 offset_right = 37.0
 offset_bottom = 9.0
 color = Color(1, 1, 1, 0.5)
+
+[node name="Outline" type="Panel" parent="." unique_id=1584800603]
+layout_mode = 0
+offset_left = -37.0
+offset_top = -65.0
+offset_right = 37.0
+offset_bottom = 9.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2o34p")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=762984332]
 layout_mode = 0
@@ -53,7 +69,7 @@ offset_top = 14.0
 offset_right = 40.0
 offset_bottom = 43.0
 mouse_default_cursor_shape = 2
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 12
 text = "test"
 clip_text = true
 icon_alignment = 1

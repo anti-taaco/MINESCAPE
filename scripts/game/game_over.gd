@@ -19,17 +19,25 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if Input.is_key_pressed(KEY_0):
+		popup_message()
 	await get_tree().create_timer(3).timeout
 	if color_rect.modulate.a < 0.5:
 		color_rect.modulate.a += 0.025
 	await get_tree().create_timer(4).timeout
 	if not sent:
 		popup_message()
+		can_play = true
+		sent = true
 
 func popup_message():
-	$AcceptDialog.dialog_text = "ERROR 001: YOU FUCKING DIED."
 	$AcceptDialog.popup_centered()
 
 func _on_accept_dialog_confirmed() -> void:
-	can_play = true
-	sent = true
+	Global.reset()
+	Modifiers.reset()
+	Tracker.reset()
+	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
+
+func _on_accept_dialog_canceled() -> void:
+	$AcceptDialog.popup_centered()

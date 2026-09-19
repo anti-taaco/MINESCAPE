@@ -10,6 +10,9 @@ var game_won : bool = false
 
 var random_spawn_cd : float = 1800
 var timer : float = 0
+@onready var board: Node2D = $CanvasLayer/Board
+@onready var t_grid: TileMapLayer = $CanvasLayer/Board/TileMapLayer
+@onready var t_open: TileMapLayer = $CanvasLayer/Board/TileMapOpened
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

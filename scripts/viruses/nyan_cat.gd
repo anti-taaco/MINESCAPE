@@ -1,18 +1,22 @@
 extends CharacterBody2D
 
 @onready var player: Node2D = %Player
+var camera : Node2D
 
-var speed = 200.0 * Modifiers.nyan_speed_multiplier
+var speed = 225.0 * Modifiers.nyan_speed_multiplier
 var direction = Vector2(1, 1).normalized()
 
 func _ready() -> void:
 	player = Global.find_node_in_scene(self, "Player")
+	camera = Global.find_node_in_parent(player, "Camera")
+	
 	global_rotation_degrees = 45
+	var cam_pos = camera.global_position
 	var window = get_viewport().get_visible_rect()
 	var rand_x = randf_range(-window.size.x/2, window.size.x/2)
 	var rand_y = randf_range(-window.size.y/2, window.size.y/2)
-	global_position.x = rand_x
-	global_position.y = rand_y
+	global_position.x = rand_x + cam_pos.x/2
+	global_position.y = rand_y + cam_pos.y/2
 
 func _physics_process(delta: float) -> void:
 	velocity.x = speed * direction.x * delta
@@ -37,4 +41,4 @@ func leave_trail():
 func _on_area_2d_mouse_entered() -> void:
 	print("Nyan Cat hit")
 	if player:
-		player.take_damage(1, false)
+		player.take_damage(1, $Sprite2D.texture)

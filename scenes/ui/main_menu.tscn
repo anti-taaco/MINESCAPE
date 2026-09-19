@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://dspojhotds26n"]
+[gd_scene format=4 uid="uid://dspojhotds26n"]
 
 [ext_resource type="Script" uid="uid://df5laeliwb57s" path="res://scripts/ui/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="PackedScene" uid="uid://w5qpuypg4j3w" path="res://scenes/game/board.tscn" id="2_1g8jr"]
 [ext_resource type="PackedScene" uid="uid://biyyxgkplyof" path="res://scenes/game/bg_music.tscn" id="2_ekxnf"]
 
 [node name="Main Menu" type="Node2D" unique_id=878417217]
@@ -47,7 +48,135 @@ offset_bottom = 252.0
 text = "QUIT
 "
 
+[node name="Volume Slider" type="HSlider" parent="." unique_id=1673938823]
+offset_left = 16.0
+offset_top = 232.0
+offset_right = 96.0
+offset_bottom = 248.0
+min_value = -72.0
+max_value = 20.0
+step = 0.5
+tick_count = 6
+
+[node name="Label" type="Label" parent="Volume Slider" unique_id=1485313736]
+layout_mode = 0
+offset_top = -24.0
+offset_right = 92.0
+offset_bottom = -1.0
+theme_override_font_sizes/font_size = 8
+text = "lazy ass volume slider"
+
+[node name="Tips Page" type="Control" parent="." unique_id=897925180]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 360.0
+offset_top = 176.0
+offset_right = 400.0
+offset_bottom = 216.0
+
+[node name="ColorRect" type="ColorRect" parent="Tips Page" unique_id=1390765974]
+layout_mode = 0
+offset_left = -360.0
+offset_top = -176.0
+offset_right = 120.0
+offset_bottom = 96.0
+color = Color(0.66107005, 0.634378, 0.7598184, 1)
+
+[node name="Label" type="Label" parent="Tips Page" unique_id=509994635]
+layout_mode = 0
+offset_left = -280.0
+offset_top = -168.0
+offset_right = -200.0
+offset_bottom = -144.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "PATTERNS"
+
+[node name="Label2" type="Label" parent="Tips Page" unique_id=1982911919]
+layout_mode = 0
+offset_left = -91.0
+offset_top = -143.0
+offset_right = 109.0
+offset_bottom = -4.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 1
+theme_override_font_sizes/font_size = 9
+text = "- The number on a tile is the number of mines surrounding that tile
+- These examples won't be the only times you see these patterns (just too lazy to put more)
+- if ur bad go practice on minesweeper.online or something
+- WASD to move camera
+- Your ability [E] can be used to reveal tiles in a 3x3 area around you once
+- [Q] to use your alt-ability once you unlock it"
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="Tips Page" unique_id=1091214974]
+layout_mode = 0
+offset_left = -40.0
+offset_top = -168.0
+offset_right = 40.0
+offset_bottom = -144.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "GENERAL"
+
+[node name="Arrow" type="Polygon2D" parent="Tips Page" unique_id=123308346]
+position = Vector2(-231.99991, -105.33333)
+scale = Vector2(0.8333333, 0.8333333)
+color = Color(1, 0, 0, 1)
+offset = Vector2(232, 112)
+polygon = PackedVector2Array(-248, -112, -272, -112, -272, -112, -272, -128, -248, -128, -248, -144, -216, -120, -248, -96)
+
+[node name="Arrow2" type="Polygon2D" parent="Tips Page" unique_id=525038535]
+position = Vector2(-214, -25)
+scale = Vector2(0.8333333, 0.8333333)
+color = Color(1, 0, 0, 1)
+offset = Vector2(232, 112)
+polygon = PackedVector2Array(-248, -112, -272, -112, -272, -112, -272, -128, -248, -128, -248, -144, -216, -120, -248, -96)
+
+[node name="Arrow3" type="Polygon2D" parent="Tips Page" unique_id=499036153]
+position = Vector2(-222.99997, 54)
+scale = Vector2(0.8333333, 0.8333333)
+color = Color(1, 0, 0, 1)
+offset = Vector2(232, 112)
+polygon = PackedVector2Array(-248, -112, -272, -112, -272, -112, -272, -128, -248, -128, -248, -144, -216, -120, -248, -96)
+
+[node name="Arrow4" type="Polygon2D" parent="Tips Page" unique_id=825603922]
+position = Vector2(-80, 56)
+scale = Vector2(0.8333333, 0.8333333)
+color = Color(1, 0, 0, 1)
+offset = Vector2(234.40007, 110.40001)
+polygon = PackedVector2Array(-248, -112, -272, -112, -272, -112, -272, -128, -248, -128, -248, -144, -216, -120, -248, -96)
+
+[node name="Board" parent="Tips Page" unique_id=388124613 instance=ExtResource("2_1g8jr")]
+z_index = 3
+position = Vector2(0, -8)
+
+[node name="TileMapFlag" parent="Tips Page/Board" index="0" unique_id=474882243]
+script = null
+
+[node name="TileMapLayer" parent="Tips Page/Board" index="1" unique_id=1742869457]
+tile_map_data = PackedByteArray("AADu/wQAAAAAAAAAAADt/wQAAAAAAAAAAADs/wQAAAAAAAAAAADr/wQAAAAAAAAAAAD1/wQAAAAAAAAAAADu////AAAAAAAAAADt////AAAAAAAAAADs////AAAAAAAAAADr////AAAAAAAAAADt//r/AAAAAAAAAADs//r/AAAAAAAAAADr//r/AAAAAAAAAAD3/wQAAAAAAAAAAAD0/wQAAAAAAAAAAADu/wUAAAAAAAAAAADt/wUAAAAAAAAAAADs/wUAAAAAAAAAAADr/wUAAAAAAAAAAAD3/wUAAAAAAAAAAAD2/wUAAAAAAAAAAAD1/wUAAAAAAAAAAAD0/wUAAAAAAAAAAAD+/wQAAAAAAAAAAAD9/wQAAAAAAAAAAAAAAAQAAAAAAAAAAAD9/wUAAAAAAAAAAAA=")
+script = null
+
+[node name="TileMapNumbers" parent="Tips Page/Board" index="2" unique_id=1550013630]
+tile_map_data = PackedByteArray("AAD1//n/AgAAAAAAAAD4//7/AQAAAAAAAAD1//7/AQAAAAAAAADu/wMAAQAAAAAAAADt/wMAAQAAAAAAAADs/wMAAQAAAAAAAADr/wMAAQAAAAAAAAD3/wMAAQAAAAAAAAD2/wMAAQAAAAAAAAD1/wMAAQAAAAAAAAD3//7/AgAAAAAAAAD2//7/AgAAAAAAAAD2//n/AQAAAAAAAAD0//n/AQAAAAAAAADu//7/AQAAAAAAAADr//7/AQAAAAAAAADt//n/AQAAAAAAAADr//n/AQAAAAAAAAD3////CgAAAAAAAAD2////CgAAAAAAAAD1//r/CgAAAAAAAAD4////CQAAAAAAAAD1////CQAAAAAAAAD2//r/CQAAAAAAAAD0//r/CQAAAAAAAADs//n/AgAAAAAAAADt//7/AgAAAAAAAADs//7/AgAAAAAAAAD0/wMAAQAAAAAAAAD2/wQAAQAAAAAAAAD9/wMAAQAAAAAAAAD+/wMAAQAAAAAAAAD//wMAAQAAAAAAAAAAAAMAAQAAAAAAAAD//wQAAQAAAAAAAAAAAAUACgAAAAAAAAD//wUACgAAAAAAAAD+/wUACgAAAAAAAAA=")
+script = null
+
+[node name="TileMapOpened" parent="Tips Page/Board" index="3" unique_id=875946998]
+tile_map_data = PackedByteArray("AADt//j/AAAAAAAAAADt//n/AAAAAAAAAADs//j/AAAAAAAAAADs//n/AAAAAAAAAADr//j/AAAAAAAAAADr//n/AAAAAAAAAAD0//j/AAAAAAAAAAD0//n/AAAAAAAAAAD1//n/AAAAAAAAAAD2//n/AAAAAAAAAAD2//j/AAAAAAAAAAD1//j/AAAAAAAAAAD4//7/AAAAAAAAAAD3//7/AAAAAAAAAAD2//7/AAAAAAAAAAD1//7/AAAAAAAAAAD1//3/AAAAAAAAAAD2//3/AAAAAAAAAAD3//3/AAAAAAAAAAD4//3/AAAAAAAAAADu//7/AAAAAAAAAADt//7/AAAAAAAAAADs//7/AAAAAAAAAADr//7/AAAAAAAAAADr//3/AAAAAAAAAADs//3/AAAAAAAAAADt//3/AAAAAAAAAADu//3/AAAAAAAAAADr/wMAAAAAAAAAAADr/wQAAAAAAAAAAADs/wQAAAAAAAAAAADt/wQAAAAAAAAAAADt/wMAAAAAAAAAAADu/wMAAAAAAAAAAADs/wMAAAAAAAAAAADu/wQAAAAAAAAAAADt/wIAAAAAAAAAAADu/wIAAAAAAAAAAADs/wIAAAAAAAAAAADr/wIAAAAAAAAAAAD3/wIAAAAAAAAAAAD2/wIAAAAAAAAAAAD1/wIAAAAAAAAAAAD1/wMAAAAAAAAAAAD1/wQAAAAAAAAAAAD2/wQAAAAAAAAAAAD3/wQAAAAAAAAAAAD3/wMAAAAAAAAAAAD2/wMAAAAAAAAAAADu////AAAAAAAAAADt////AAAAAAAAAADs////AAAAAAAAAADr////AAAAAAAAAAD1////AAAAAAAAAAD2////AAAAAAAAAAD3////AAAAAAAAAAD4////AAAAAAAAAAD2//r/AAAAAAAAAAD1//r/AAAAAAAAAAD0//r/AAAAAAAAAADt//r/AAAAAAAAAADs//r/AAAAAAAAAADr//r/AAAAAAAAAAD0/wQAAAAAAAAAAAD0/wMAAAAAAAAAAAD0/wIAAAAAAAAAAAD9/wQAAAAAAAAAAAD9/wMAAAAAAAAAAAD9/wIAAAAAAAAAAAD+/wIAAAAAAAAAAAD+/wMAAAAAAAAAAAD+/wQAAAAAAAAAAAD//wQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAIAAAAAAAAAAAD//wIAAAAAAAAAAAD//wMAAAAAAAAAAAAAAAUAAAAAAAAAAAD//wUAAAAAAAAAAAD+/wUAAAAAAAAAAAD9/wUAAAAAAAAAAAD3/wUAAAAAAAAAAAD2/wUAAAAAAAAAAAD1/wUAAAAAAAAAAAD0/wUAAAAAAAAAAADu/wUAAAAAAAAAAADt/wUAAAAAAAAAAADs/wUAAAAAAAAAAADr/wUAAAAAAAAAAAA=")
+script = null
+
+[node name="Tips" type="Button" parent="." unique_id=1364882522]
+offset_left = 410.0
+offset_top = 223.0
+offset_right = 457.0
+offset_bottom = 254.0
+text = "TIPS
+"
+
 [node name="BG Music" parent="." unique_id=265166352 instance=ExtResource("2_ekxnf")]
 
 [connection signal="button_up" from="Play" to="." method="_on_play_button_up"]
 [connection signal="button_up" from="Quit" to="." method="_on_quit_button_up"]
+[connection signal="button_up" from="Tips" to="." method="_on_tips_button_up"]
+
+[editable path="Tips Page/Board"]

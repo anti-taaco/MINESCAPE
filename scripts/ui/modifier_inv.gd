@@ -1,11 +1,14 @@
 extends Control
 
-@onready var mod_items: Control = $"Mod Items"
+@onready var mod_items: GridContainer = $"ScrollContainer/Mod Items"
+#@onready var mod_items: GridContainer = $"Mod Items"
 @onready var color_rect: ColorRect = $ColorRect
-@onready var virus: BoxContainer = $"Mod Items/Virus"
-@onready var bug: BoxContainer = $"Mod Items/Bug"
-@onready var upgrade: BoxContainer = $"Mod Items/Upgrade"
-@onready var bug_2: BoxContainer = $"Mod Items/Bug2"
+@onready var virus_hold: BoxContainer = $Virus
+@onready var bug_hold: BoxContainer = $Bug
+@onready var upgrade_hold: BoxContainer = $Upgrade
+@onready var bug2_hold: BoxContainer = $Bug2
+
+
 var MODIFIER_ITEM = load("uid://cp0av3xqya60x")
 
 var virus_list = Global.store_scenes_as_resources(Global.virus_list)
@@ -30,34 +33,49 @@ func _ready() -> void:
 	#upgrade_list.append("1-up.tres")
 	upgrade_list.sort()
 	
-	add_list_to_inv(virus_list, "virus")
-	add_list_to_inv(bug_list, "bug")
-	add_list_to_inv(bug2_list, "bug2")
-	add_list_to_inv(upgrade_list, "upgrade")
+	add_list_to_inv(virus_list, virus_hold, "virus")
+	add_list_to_inv(bug_list, bug_hold, "bug")
+	add_list_to_inv(bug2_list, bug2_hold, "bug2")
+	add_list_to_inv(upgrade_list, upgrade_hold, "upgrade")
 
 
 # FIX MOVING DOWN ISSUE
 func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("check modifiers"):
+		visible = !visible
+	
+	var replace = false
 	if virus_list != Global.store_scenes_as_resources(Global.virus_list ):
 		virus_list = Global.store_scenes_as_resources(Global.virus_list)
-		update_list(virus_list, "virus")
+		replace = true
+		
 		
 	if bug_list != Global.store_resources(Global.bug_list ):
 		bug_list = Global.store_resources(Global.bug_list)
-		update_list(bug_list, "bug")
+		replace = true
+		
 	
 	if bug2_list != Global.store_resources(Global.bug2_list ) and bug2_list.size() > 0:
 		bug2_list = Global.store_resources(Global.bug2_list)
-		update_list(bug2_list, "bug2")
+		replace = true
+		
 		
 	if upgrade_list != Global.store_resources(Global.upgrade_list ):
 		upgrade_list = Global.store_resources(Global.upgrade_list)
-		update_list(upgrade_list, "upgrade")
+		replace = true
+		
 	
-func add_list_to_inv(sel_list, category: String):
+	if replace:
+		for child in mod_items.get_children():
+			mod_items.remove_child(child )
+		update_list(virus_list, virus_hold, "virus")
+		update_list(bug_list, bug_hold, "bug")
+		update_list(bug2_list, bug2_hold, "bug2")
+		update_list(upgrade_list, upgrade_hold, "upgrade")
+	
+func add_list_to_inv(sel_list, holder, category: String):
 	print("sel: " + str(sel_list) )
 	print(list_assign_num(sel_list) )
-	var holder = mod_items.get_child(list_assign_num(sel_list) )
 	for item in sel_list:
 		var stack = false
 		var cho = MODIFIER_ITEM.instantiate()
@@ -66,7 +84,20 @@ func add_list_to_inv(sel_list, category: String):
 		if not stack:
 			holder.add_child(cho )
 		cho.get_child(0).modulate = assign_color(sel_list)
-	#sel_list.clear()
+	add_to_grid(holder)
+		
+#func add_list_to_inv(sel_list, category: String):
+	#print("sel: " + str(sel_list) )
+	#print(list_assign_num(sel_list) )
+	#var holder = mod_items.get_child(list_assign_num(sel_list) )
+	#for item in sel_list:
+		#var stack = false
+		#var cho = MODIFIER_ITEM.instantiate()
+		#cho.stats = Global.path_to_resource(category + " choices", item)
+		#stack = check_duplicates(cho, holder, holder.get_child_count() )
+		#if not stack:
+			#holder.add_child(cho )
+		#cho.get_child(0).modulate = assign_color(sel_list)
 
 func add_item_to_inv(item, sel_list, category: String):
 	var stack = false
@@ -77,12 +108,18 @@ func add_item_to_inv(item, sel_list, category: String):
 		mod_items.get_child(list_assign_num(sel_list) ).add_child(cho)
 	cho.get_child(0).modulate = assign_color(sel_list)
 
-func update_list(sel_list, category: String ):
+func update_list(sel_list, holder, category: String ):
 	var num = list_assign_num(sel_list)
-	for child in mod_items.get_child(num ).get_children():
+	print("hold:" + str(holder) )
+	for child in holder.get_children(): #mod_items.get_child(num ).get_children():
 		print(child.stats)
 		child.free()
-	add_list_to_inv(sel_list, category)
+	add_list_to_inv(sel_list, holder, category)
+
+func add_to_grid(holder):
+	for child in holder.get_children():
+		holder.remove_child(child )
+		mod_items.add_child(child )
 
 func assign_color(sel_list):
 	if sel_list == virus_list:

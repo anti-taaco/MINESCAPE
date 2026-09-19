@@ -20,4 +20,4 @@ func randomize_line():
 func _on_area_2d_mouse_entered() -> void:
 	if bcod.firing:
 		print("BCOD hit")
-		player.take_damage(1, false)
+		player.take_damage(1, bcod.get_node("Sprite2D").texture )

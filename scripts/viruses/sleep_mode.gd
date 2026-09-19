@@ -71,7 +71,7 @@ func _physics_process(delta: float) -> void:
 		if moving:
 			Audio.sleep_wake_stop()
 			Audio.sleep_hit()
-			player.take_damage(1, false)
+			player.take_damage(1, sprite.sprite_frames.get_frame_texture("awake", 0) )
 
 func mouse_movement():
 	var mouse_vel = Input.get_last_mouse_velocity()

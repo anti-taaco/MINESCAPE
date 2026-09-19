@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="VirusChoice" format=3 uid="uid://bniy5083iwq1y"]
+
+[ext_resource type="Script" uid="uid://cqac0q3lkmb7l" path="res://scripts/resources/virus choices/virus_choice.gd" id="1_6ry26"]
+[ext_resource type="Texture2D" uid="uid://casm6glmyikdl" path="res://assets/images/viruses/ice.png" id="2_qijoa"]
+
+[resource]
+script = ExtResource("1_6ry26")
+texture = ExtResource("2_qijoa")
+name = "Ice"
+description = "Occasionally follows the cursor closely. Exiting her deals damage"
+bit_gain = 650
+stack = 1
+level = 3
+metadata/_custom_type_script = "uid://cqac0q3lkmb7l"

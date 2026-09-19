@@ -9,8 +9,18 @@ script = ExtResource("1_hfhxj")
 [node name="AcceptDialog" type="AcceptDialog" parent="." unique_id=75293534]
 oversampling_override = 1.0
 title = "MINESCAPE"
-position = Vector2i(0, 36)
-ok_button_text = "I'm Sorry"
+size = Vector2i(400, 200)
+ok_button_text = "RESTART"
+
+[node name="ItemList" type="ItemList" parent="AcceptDialog" unique_id=765333570]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 192.0
+offset_bottom = 51.0
+item_count = 3
+item_0/text = "imagine dying"
+item_1/text = "ok but fr thanks for playing"
+item_2/text = "if you have feedback give it to me"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=198971118]
 offset_right = 480.0
@@ -24,4 +34,5 @@ offset_bottom = 270.0
 
 [node name="BG Music" parent="." unique_id=265166352 instance=ExtResource("2_er7gy")]
 
+[connection signal="canceled" from="AcceptDialog" to="." method="_on_accept_dialog_canceled"]
 [connection signal="confirmed" from="AcceptDialog" to="." method="_on_accept_dialog_confirmed"]

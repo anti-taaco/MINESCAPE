@@ -6,6 +6,7 @@ extends Node2D
 @onready var reroll_tooltip: PanelContainer = $Reroll/Tooltip
 @onready var mod_inv: Control = $"Modifier Inventory"
 @onready var mod_bag: TextureButton = $"Modifiers Bag"
+@onready var mod_label: Label = $"Check Modifiers/Modifiers Label"
 
 @onready var left: CollisionShape2D = $"V Borders/left"
 @onready var right: CollisionShape2D = $"V Borders/right"
@@ -39,11 +40,11 @@ var category_text : String = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#$Reroll/Tooltip.change_font_size(10)
 	reroll_tooltip.initialize(10, Vector2(60, 25))
 	
-	for i in range(3-choices):
-		selection.get_child(get_child_count()-1).queue_free()
+	var del = 3-choices
+	for i in range(del):
+		selection.get_child(selection.get_child_count()-1).queue_free()
 	game_screen.texture = Global.screenshot
 	
 	if (Global.level+1) % 2 == 0:
@@ -56,7 +57,7 @@ func _ready() -> void:
 		#print("bugs squared choose")
 		#bugs_squared += 1
 		pass
-	if Global.level % 5 == 3 or Global.level % 5 == 0:
+	if Global.level >= 3 and Global.level % 2 == 1: #Global.level % 5 == 3 or Global.level % 5 == 0:
 		print("shop choose")
 		shop = true
 	Audio.stop_audio()

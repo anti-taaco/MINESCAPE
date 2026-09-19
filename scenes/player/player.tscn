@@ -66,3 +66,6 @@ offset_right = 35.0
 offset_bottom = 35.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("5_qlg0r")
+
+[connection signal="area_entered" from="Cursor/Area2D" to="Cursor" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Cursor/Area2D" to="Cursor" method="_on_area_2d_area_exited"]

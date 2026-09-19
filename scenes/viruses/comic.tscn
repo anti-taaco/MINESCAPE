@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://coarg8yid4alo"]
+
+[ext_resource type="Texture2D" uid="uid://dyfjlpb32hah8" path="res://assets/images/viruses/comic_idle.png" id="1_liax0"]
+[ext_resource type="Script" uid="uid://c51jpf72h1t3f" path="res://scripts/viruses/comic.gd" id="1_sscol"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2o34p"]
+size = Vector2(16, 26)
+
+[node name="Comic" type="CharacterBody2D" unique_id=1323230888]
+script = ExtResource("1_sscol")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1293924949]
+texture = ExtResource("1_liax0")
+
+[node name="Lasers" type="Node2D" parent="." unique_id=506654890]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=712072728]
+shape = SubResource("RectangleShape2D_2o34p")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1098130459]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1417855941]
+shape = SubResource("RectangleShape2D_2o34p")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

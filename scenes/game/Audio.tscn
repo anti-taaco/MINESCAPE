@@ -17,6 +17,9 @@
 [ext_resource type="AudioStream" uid="uid://boke3xc1o26t2" path="res://assets/audio/sfx/viruses/Undertale Death Sound Effect.mp3" id="15_2tvmb"]
 [ext_resource type="AudioStream" uid="uid://bmnwlre65ig3p" path="res://assets/audio/sfx/viruses/Money Bag Sound Effect.mp3" id="16_55ofn"]
 [ext_resource type="AudioStream" uid="uid://pk4j6g8x6ry4" path="res://assets/audio/sfx/viruses/nullscape-baby-alerrt.mp3" id="16_mtyxf"]
+[ext_resource type="AudioStream" uid="uid://bql1dw18er42k" path="res://assets/audio/sfx/viruses/Freezerexplode.wav" id="18_dsxca"]
+[ext_resource type="AudioStream" uid="uid://j3invg2oaqaw" path="res://assets/audio/sfx/viruses/Peoplejump.wav" id="19_lo7sk"]
+[ext_resource type="AudioStream" uid="uid://048l8ydfbe8v" path="res://assets/audio/sfx/viruses/bfb blsat.wav" id="20_d2w8s"]
 
 [node name="Audio" type="AudioStreamPlayer2D" unique_id=222432921]
 bus = &"SFX"
@@ -83,6 +86,7 @@ stream = ExtResource("11_mvwgk")
 
 [node name="Pop" type="AudioStreamPlayer" parent="Content" unique_id=1545996161]
 stream = ExtResource("13_ic6ve")
+volume_db = 3.0
 
 [node name="Active" type="AudioStreamPlayer" parent="Content" unique_id=1012769128]
 stream = ExtResource("14_1rrch")
@@ -100,3 +104,22 @@ volume_db = -12.0
 [node name="Hit" type="AudioStreamPlayer" parent="Bitecoin" unique_id=2070028842]
 stream = ExtResource("16_55ofn")
 volume_db = -4.0
+
+[node name="Ice" type="Node" parent="." unique_id=315661971]
+
+[node name="Active" type="AudioStreamPlayer" parent="Ice" unique_id=1357616722]
+stream = ExtResource("18_dsxca")
+volume_db = -4.0
+
+[node name="Disappear" type="AudioStreamPlayer" parent="Ice" unique_id=357332551]
+stream = ExtResource("19_lo7sk")
+volume_db = 4.0
+
+[node name="Recycle Bin" type="Node" parent="." unique_id=1061352778]
+
+[node name="Comic" type="Node" parent="." unique_id=646320277]
+
+[node name="Blast" type="AudioStreamPlayer" parent="Comic" unique_id=1217601031]
+stream = ExtResource("20_d2w8s")
+volume_db = -7.0
+max_polyphony = 5

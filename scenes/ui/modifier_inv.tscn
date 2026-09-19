@@ -13,7 +13,7 @@ script = ExtResource("1_e4y4p")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=784772991]
 layout_mode = 0
-offset_top = 130.0
+offset_top = 105.0
 offset_right = 480.0
 offset_bottom = 270.0
 color = Color(0, 0, 0, 0.6)
@@ -25,27 +25,44 @@ offset_right = 480.0
 offset_bottom = 270.0
 color = Color(0, 0, 0, 0.3)
 
-[node name="Mod Items" type="GridContainer" parent="." unique_id=1457409781]
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1716695990]
 layout_mode = 0
-offset_top = 130.0
+offset_top = 105.0
 offset_right = 480.0
 offset_bottom = 270.0
-theme_override_constants/h_separation = 48
-theme_override_constants/v_separation = 48
-columns = 8
 
-[node name="Virus" type="BoxContainer" parent="Mod Items" unique_id=1497512661]
+[node name="Mod Items" type="GridContainer" parent="ScrollContainer" unique_id=1457409781]
 layout_mode = 2
+theme_override_constants/h_separation = 52
+theme_override_constants/v_separation = 52
+columns = 9
+
+[node name="Virus" type="BoxContainer" parent="." unique_id=1497512661]
+layout_mode = 0
+offset_top = 130.0
+offset_bottom = 130.0
 theme_override_constants/separation = 48
 
-[node name="Bug" type="BoxContainer" parent="Mod Items" unique_id=561214336]
-layout_mode = 2
+[node name="Bug" type="BoxContainer" parent="." unique_id=561214336]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 130.0
+offset_right = 48.0
+offset_bottom = 130.0
 theme_override_constants/separation = 48
 
-[node name="Upgrade" type="BoxContainer" parent="Mod Items" unique_id=492465787]
-layout_mode = 2
+[node name="Upgrade" type="BoxContainer" parent="." unique_id=492465787]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 130.0
+offset_right = 96.0
+offset_bottom = 130.0
 theme_override_constants/separation = 48
 
-[node name="Bug2" type="BoxContainer" parent="Mod Items" unique_id=664181121]
-layout_mode = 2
+[node name="Bug2" type="BoxContainer" parent="." unique_id=664181121]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 130.0
+offset_right = 144.0
+offset_bottom = 130.0
 theme_override_constants/separation = 48

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b4r7st3hdpmmi"]
+
+[ext_resource type="Script" uid="uid://cv3hh2d8dghre" path="res://scripts/viruses/recycle_bin.gd" id="1_1v8ok"]
+[ext_resource type="Texture2D" uid="uid://qo17de23sq1u" path="res://assets/images/viruses/recycle bin.png" id="1_b24vm"]
+
+[node name="Recycle Bin" type="Node2D" unique_id=2119222680]
+script = ExtResource("1_1v8ok")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1004660472]
+texture = ExtResource("1_b24vm")
+
+[node name="Flags" type="Label" parent="." unique_id=1511215204]
+offset_left = -36.0
+offset_top = -1.0
+offset_right = 7.0
+offset_bottom = 27.0
+pivot_offset = Vector2(7, 15)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 12
+text = "10/10"
+
+[node name="Time" type="Label" parent="." unique_id=920936725]
+offset_left = -16.0
+offset_top = -69.0
+offset_right = 1.0
+offset_bottom = -54.0
+theme_override_colors/font_color = Color(0.34407577, 0.34407574, 0.34407574, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 10
+text = "1/1"
